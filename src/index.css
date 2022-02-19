@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h6 {
+  letter-spacing: .35em !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #909090;
+  border-radius: 5px;
+  height: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+#buttonIconGithub > span > span > svg {
+  fill: white !important;
+}
+
+#buttonIconGuides > span > span > svg {
+  fill: white !important;
+}
+
+#buttonIconEmail > span > span > svg {
+  fill: white !important;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+button:hover {
+  background-color: #222 !important;
+  opacity: .8 !important;
+}
+
+.MuiCard-root {
+  background-color: #222 !important;
+  color: #FFF !important;
+  opacity: .8 !important;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important;
+}
+
+.MuiCard-root p	{
+  color: #FFF !important;
+}
+
+.MuiCardActionArea-root:hover {
+  background-color: #222 !important;
+  opacity: .8 !important;
+}
+
+#guideImage {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important;
+}
+
+#root {
+  overflow: hidden;
+}
