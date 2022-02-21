@@ -7,8 +7,6 @@ import { cx, css } from '@emotion/css';
 // styles
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { purple } from '@mui/material/colors';
-
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -28,9 +26,14 @@ import DesktopMacIcon from '@mui/icons-material/DesktopMac';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 
+// components
+import HomePage from "./pages/homePage/homePage";
+
 const theme = createTheme({
   palette: {
-    primary: purple
+    primary: {
+      main: '#222'
+    }
   },
 });
 
@@ -208,8 +211,8 @@ function App(props) {
           >
             <div />
             <Routes>
-              {/* <Route exact path="/home" component={HomePage} />
-              <Route path="/projects/montanye-wedding" component={MontanyeWeddingProject} />
+              <Route exact path="/home" element={<HomePage />} />
+              {/* <Route path="/projects/montanye-wedding" component={MontanyeWeddingProject} />
               <Route path="/projects" component={ProjectsPage} />
               <Route path="/guides/become-a-developer" component={BecomeDeveloperGuide} />
               <Route path="/guides" component={GuidesPage} />
