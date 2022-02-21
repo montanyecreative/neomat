@@ -114,18 +114,19 @@ function App(props) {
             marginLeft: drawerWidth,
             backgroundColor: "#222 !important",
             minHeight: "70px !important",
-            height: "70px !important",
-            [theme.breakpoints.up("sm")]: {
-              width: `calc(100% - ${drawerWidth}px)`
-            }
+            height: "70px !important"
           }}
         >
           <Toolbar sx={{ justifyContent: 'space-between' }}>
             <a
               href="/Home"
-              sx={{ textDecoration: "none", color: "#FFF", fontSize: "1.25rem", lineHeight: "1.6" }}
+              id="brand-link"
             >
-              <Typography variant="h6" noWrap aria-label="Navigate to home page">
+              <Typography
+                variant="h6"
+                noWrap
+                aria-label="Navigate to home page"
+              >
                 JMDesigns
               </Typography>
             </a>
@@ -158,8 +159,12 @@ function App(props) {
               onClose={handleDrawerClose}
               sx={{
                 width: drawerWidth,
-                borderRadius: "3px",
-                overflowX: "hidden"
+                flexShrink: 0,
+                '& .MuiDrawer-paper': {
+                  width: drawerWidth,
+                  borderRadius: "3px",
+                  overflowX: "hidden"
+                },
               }}
               ModalProps={{
                 keepMounted: true // Better open performance on mobile.
@@ -169,7 +174,6 @@ function App(props) {
                 sx={{
                   display: 'flex',
                   alignItems: 'center',
-                  padding: theme.spacing(0, 1),
                   // necessary for content to be below app bar
                   ...theme.mixins.toolbar,
                   justifyContent: 'flex-start'
@@ -180,7 +184,8 @@ function App(props) {
                   sx={{
                     borderRadius: "50px",
                     background: "linear-gradient(225deg, #e6e6e6, #ffffff)",
-                    boxShadow: "-7px 7px 14px #d9d9d9, 7px -7px 14px #ffffff"
+                    boxShadow: "-7px 7px 14px #d9d9d9, 7px -7px 14px #ffffff",
+
                   }}
                   aria-label="Close menu"
                 >
