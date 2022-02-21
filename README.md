@@ -1,23 +1,24 @@
-# Getting Started with Create React App
+# neomat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A Material Design boilerplate based on Soft UI and Neumorphism. Powered by React JS and Material UI.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+After clonning the repository, make sure to run:
+
+### `npm install`
+
+to install the project dependencies.
+
+In the project directory, you can also run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
 ### `npm run build`
 
@@ -29,42 +30,37 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Testing
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### `test-check-links`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Checks to see if any of the links in the application are broken.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Cypress Framework
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Overview, [https://www.cypress.io/](https://www.cypress.io/).
 
-## Learn More
+#### `open-cypress`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Opens Cypress GUI from project root.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Technologies & Languages
 
-### Code Splitting
+[Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+[React](https://reactjs.org/)
 
-### Analyzing the Bundle Size
+[Material UI](https://material-ui.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[Emotion CSS](https://emotion.sh/docs/introduction)
 
-### Making a Progressive Web App
+To learn about Neomorphism, check out this [article](https://medium.muz.li/neumorphic-design-ad5586796b1b).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Tools
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Some tools to help you get started with your own neomorphic and soft ui designs.
+[https://neumorphism.io/#e0e0e0](https://neumorphism.io/#e0e0e0)
 
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
