@@ -29,6 +29,7 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 // components
 import HomePage from "./pages/homePage/homePage";
 import ProjectsPage from "./pages/projectsPage/projectsPage";
+import MontanyeWeddingProject from "./pages/projectsPage/sections/montanyeWedding";
 
 const theme = createTheme({
   palette: {
@@ -213,7 +214,7 @@ function App(props) {
             <div />
             <Routes>
               <Route exact path="/home" element={<HomePage />} />
-              {/* <Route path="/projects/montanye-wedding" component={MontanyeWeddingProject} /> */}
+              <Route path="/projects/montanye-wedding" element={<MontanyeWeddingProject />} />
               <Route path="/projects" element={<ProjectsPage />} />
               {/* <Route path="/guides/become-a-developer" component={BecomeDeveloperGuide} />
               <Route path="/guides" component={GuidesPage} />

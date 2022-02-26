@@ -5,12 +5,6 @@ import { cx, css } from '@emotion/css';
 import bannerImage from "../../../assets/imgs/projects-banner.jpeg";
 
 // styles
-const customTitle = css`
-    flex: 0 0 100%;
-    text-align: center;
-    color: #FFF;
-`
-
 const bannerStyle = css`
     transform: translate3d(0px, 0px, 0px);
     background-image: url(${bannerImage});

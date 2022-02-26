@@ -7,7 +7,7 @@ import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
-import Divider from '@mui/material/Divider';
+// import Divider from '@mui/material/Divider';
 import { Typography } from "@mui/material";
 import {
     textMiddle,
@@ -65,15 +65,15 @@ export default function ProjectListSection() {
                 >
                     <Item key={16} elevation={16} className={cx(montanyeWedding)} />
                     <div className={cx(textMiddle, mx1)}>
-                        <h2>Montanye Wedding</h2>
+                        <Typography variant="h4" component="div">
+                            Montanye Wedding
+                        </Typography>
                         <Typography>
                             Wedding website for the Montanye wedding built in Material Design 4.0 and React. Powered on the backend by POSTgres and Node.js.
                         </Typography>
                         <Link
-                            href="/"
+                            href="/projects/montanye-wedding"
                             title="See Montanye Wedding project"
-                            target="_blank"
-                            rel="noopener"
                         >
                             <Button
                                 className={cx(buttonPrimary, buttonLink)}
@@ -98,7 +98,9 @@ export default function ProjectListSection() {
                 >
                     <Item key={16} elevation={16} className={cx(githubProject)} />
                     <div className={cx(textMiddle, mx1)}>
-                        <h2>GitHub Enhanced README</h2>
+                        <Typography variant="h4" component="div">
+                            GitHub Enhanced README
+                        </Typography>
                         <Typography>
                             An enhanced README for my main GitHub repo. Highlights langauges and technologies I use as well as GitHub statistics that are updated daily from API.
                         </Typography>
@@ -131,7 +133,9 @@ export default function ProjectListSection() {
                 >
                     <Item key={16} elevation={16} className={cx(thePalateSTL)} />
                     <div className={cx(textMiddle, mx1)}>
-                        <h2>The Palate STL</h2>
+                        <Typography variant="h4" component="div">
+                            The Palate STL
+                        </Typography>
                         <Typography>
                             A local food finder app written in HTML5, CSS3, JavaScript, and PHP.
                         </Typography>
