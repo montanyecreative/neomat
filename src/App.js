@@ -28,6 +28,7 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 
 // components
 import HomePage from "./pages/homePage/homePage";
+import ProjectsPage from "./pages/projectsPage/projectsPage";
 
 const theme = createTheme({
   palette: {
@@ -212,9 +213,9 @@ function App(props) {
             <div />
             <Routes>
               <Route exact path="/home" element={<HomePage />} />
-              {/* <Route path="/projects/montanye-wedding" component={MontanyeWeddingProject} />
-              <Route path="/projects" component={ProjectsPage} />
-              <Route path="/guides/become-a-developer" component={BecomeDeveloperGuide} />
+              {/* <Route path="/projects/montanye-wedding" component={MontanyeWeddingProject} /> */}
+              <Route path="/projects" element={<ProjectsPage />} />
+              {/* <Route path="/guides/become-a-developer" component={BecomeDeveloperGuide} />
               <Route path="/guides" component={GuidesPage} />
               <Route path="/resume" component={ResumePage} /> */}
               {/* <Navigate direct from="/" to="/home" /> */}
