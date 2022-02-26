@@ -22,9 +22,9 @@ export default function ProjectsPage() {
                 <BannerSection />
                 <div className={cx(my1, marginLeft)}>
                     <BreadcrumbSection />
-                    <Typography variant="h2" component="div">
+                    <h1>
                         Projects
-                    </Typography>
+                    </h1>
                 </div>
                 <ProjectListSection />
                 <Footer />

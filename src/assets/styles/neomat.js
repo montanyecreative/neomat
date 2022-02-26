@@ -107,8 +107,16 @@ const textCenter = css`
     text-align: center;
 `
 
-const vaMiddle = css`
-    vertical-align: middle;
+const textMiddle = css`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+`
+
+const dividingLine = css`
+    border-top: 1px solid #000;
 `
 
 // buttons
@@ -185,7 +193,8 @@ export {
     mx5,
     py1,
     textCenter,
-    vaMiddle,
+    textMiddle,
+    dividingLine,
     buttonPrimary,
     buttonLink,
     avatar,
