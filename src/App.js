@@ -219,7 +219,7 @@ function App(props) {
               {/* <Route path="/guides/become-a-developer" component={BecomeDeveloperGuide} />
               <Route path="/guides" component={GuidesPage} />
               <Route path="/resume" component={ResumePage} /> */}
-              {/* <Navigate direct from="/" to="/home" /> */}
+              <Route path="/" element={<Navigate to="/home" />} />
             </Routes>
           </main>
         </BrowserRouter>
