@@ -11,7 +11,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Paper from '@mui/material/Paper';
 import { Typography } from "@mui/material";
-import { containerFluid, main, my1, my3, pb2, px4, py1, textCenter } from "../../../assets/styles/neomat";
+import { containerFluid, main, my1, pb2, px4, py1 } from "../../../assets/styles/neomat";
 
 // icons
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
@@ -26,7 +26,7 @@ const backgroundColor = css`
     background-color: #222;
 `
 
-const marginTop = css`
+const paddingTop = css`
     padding-top: 5em;
 `
 
@@ -60,7 +60,7 @@ export default function MontanyeWedding() {
     return (
         <div className={cx(containerFluid)}>
             <div className={cx(main, px4, pb2)}>
-                <div className={cx(my1, marginTop)}>
+                <div className={cx(my1, paddingTop)}>
                     <Breadcrumbs
                         separator={<NavigateNextIcon fontSize="small" />}
                         aria-label="Projects navigation"

@@ -26,8 +26,9 @@ import DesktopMacIcon from '@mui/icons-material/DesktopMac';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 
-// components
+// components/sections
 import HomePage from "./pages/homePage/homePage";
+import ResumePage from "./pages/resumePage/resumePage";
 import ProjectsPage from "./pages/projectsPage/projectsPage";
 import MontanyeWeddingProject from "./pages/projectsPage/sections/montanyeWedding";
 
@@ -217,8 +218,8 @@ function App(props) {
               <Route path="/projects/montanye-wedding" element={<MontanyeWeddingProject />} />
               <Route path="/projects" element={<ProjectsPage />} />
               {/* <Route path="/guides/become-a-developer" component={BecomeDeveloperGuide} />
-              <Route path="/guides" component={GuidesPage} />
-              <Route path="/resume" component={ResumePage} /> */}
+              <Route path="/guides" component={GuidesPage} /> */}
+              <Route path="/resume" element={<ResumePage />} />
               <Route path="/" element={<Navigate to="/home" />} />
             </Routes>
           </main>

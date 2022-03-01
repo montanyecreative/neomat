@@ -1,5 +1,5 @@
 import React from "react";
-import { cx, css } from '@emotion/css';
+import { cx } from '@emotion/css';
 
 // sections of this page
 import BannerSection from "./sections/banner.js";
