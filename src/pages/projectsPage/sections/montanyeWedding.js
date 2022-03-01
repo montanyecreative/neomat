@@ -9,8 +9,9 @@ import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Paper from '@mui/material/Paper';
 import { Typography } from "@mui/material";
-import { containerFluid, main, my1, my3, pb2, px4, textCenter } from "../../../assets/styles/neomat";
+import { containerFluid, main, my1, my3, pb2, px4, py1, textCenter } from "../../../assets/styles/neomat";
 
 // icons
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
@@ -89,29 +90,26 @@ export default function MontanyeWedding() {
                         Lauren and John were able to create a very customized website built off a very feature-rich theme base.
                     </Typography>
                 </div>
-                <div className={cx(textCenter, my3)}>
-                    <Typography variant="h4" component="span">
-                        Gallery
-                    </Typography>
-                </div>
-                <ImageList sx={{ width: '100%' }} variant="woven" cols={3} gap={12}>
-                    {itemData.map((item) => (
-                        <ImageListItem key={item.img}>
-                            <img
-                                src={`${item.img}?w=161&fit=crop&auto=format`}
-                                srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
-                                alt={item.title}
-                                loading="lazy"
-                            />
-                        </ImageListItem>
-                    ))}
-                </ImageList>
-                <div>
-                    <img
-                        src={bottomImage}
-                        className={cx(bottomPortfolioImage)}
-                    />
-                </div>
+                <Paper elevation={13} sx={{ backgroundColor: '#222 !important', color: '#FFF' }} className={cx(py1)}>
+                    <ImageList sx={{ width: '100%' }} variant="woven" cols={3} gap={12}>
+                        {itemData.map((item) => (
+                            <ImageListItem key={item.img}>
+                                <img
+                                    src={`${item.img}?w=161&fit=crop&auto=format`}
+                                    srcSet={`${item.img}?w=161&fit=crop&auto=format&dpr=2 2x`}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        ))}
+                    </ImageList>
+                    <div>
+                        <img
+                            src={bottomImage}
+                            className={cx(bottomPortfolioImage)}
+                        />
+                    </div>
+                </Paper>
             </div>
             <Footer />
         </div >
