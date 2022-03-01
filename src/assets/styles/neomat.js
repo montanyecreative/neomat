@@ -272,6 +272,7 @@ const buttonLink = css`
 const fontSize1 = css`
     font-size: 1em;
 `
+
 const emphasis = css`
     font-size: 1em;
     font-style: italic;

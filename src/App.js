@@ -30,7 +30,7 @@ import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
 import HomePage from "./pages/homePage/homePage";
 import ResumePage from "./pages/resumePage/resumePage";
 import ProjectsPage from "./pages/projectsPage/projectsPage";
-import MontanyeWeddingProject from "./pages/projectsPage/sections/montanyeWedding";
+import MontanyeWeddingProject from "./pages/projectsPage/sections/projects/montanyeWedding";
 import GuidesPage from "./pages/guidesPage/guidesPage";
 import BecomeDeveloperGuide from "./pages/guidesPage/sections/guides/becomeDeveloperGuide";
 

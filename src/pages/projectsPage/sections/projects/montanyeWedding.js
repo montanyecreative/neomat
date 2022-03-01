@@ -2,7 +2,7 @@ import React from "react";
 import { cx, css } from '@emotion/css';
 
 // sections of this page
-import Footer from "../../../components/footer.js";
+import Footer from "../../../../components/footer.js";
 
 // styles
 import Breadcrumbs from '@mui/material/Breadcrumbs';
@@ -12,27 +12,41 @@ import ImageListItem from '@mui/material/ImageListItem';
 import Paper from '@mui/material/Paper';
 import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 import { Typography } from "@mui/material";
-import { containerFluid, main, my1, pb2, px4, py1, textCenter } from "../../../assets/styles/neomat";
+import {
+    containerFluid,
+    main,
+    my1,
+    pb2,
+    px4,
+    py1,
+    textCenter,
+    buttonPrimary,
+    buttonLink,
+    mb2,
+    mb3
+} from "../../../../assets/styles/neomat";
 
 // icons
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-import htmlImage from "../../../assets/imgs/skills/html5.svg";
-import css3Image from "../../../assets/imgs/skills/css3.svg";
-import reactImage from "../../../assets/imgs/skills/react.svg";
-import javascriptImage from "../../../assets/imgs/skills/javascript.svg";
-import materialdesignImage from "../../../assets/imgs/skills/materialdesign.svg";
-import githubImage from "../../../assets/imgs/skills/github-white.svg";
-import mailchimpImage from "../../../assets/imgs/skills/mailchimp.svg";
-import sassImage from "../../../assets/imgs/skills/sass.svg";
-
-
+import htmlImage from "../../../../assets/imgs/skills/html5.svg";
+import css3Image from "../../../../assets/imgs/skills/css3.svg";
+import reactImage from "../../../../assets/imgs/skills/react.svg";
+import javascriptImage from "../../../../assets/imgs/skills/javascript.svg";
+import materialdesignImage from "../../../../assets/imgs/skills/materialdesign.svg";
+import githubImage from "../../../../assets/imgs/skills/github-white.svg";
+import mailchimpImage from "../../../../assets/imgs/skills/mailchimp.svg";
+import sassImage from "../../../../assets/imgs/skills/sass.svg";
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LanguageIcon from '@mui/icons-material/Language';
 
 // images
-import montanyeWeddingHomePage from "../../../assets/imgs/projects/montanye-wedding/montanye-wedding-home.png";
-import montanyeWeddingWhenWherePage from "../../../assets/imgs/projects/montanye-wedding/montanye-wedding-whenwhere.png";
-import montanyeWeddingRSVPPage from "../../../assets/imgs/projects/montanye-wedding/montanye-wedding-vendors.png";
-import bottomImage from "../../../assets/imgs/projects/montanye-wedding/montanye-wedding-rsvp.png";
+import montanyeWeddingHomePage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-home.png";
+import montanyeWeddingWhenWherePage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-whenwhere.png";
+import montanyeWeddingRSVPPage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-vendors.png";
+import bottomImage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-rsvp.png";
 
 const backgroundColor = css`
     background-color: #222;
@@ -81,7 +95,7 @@ export default function MontanyeWedding() {
     return (
         <div className={cx(containerFluid)}>
             <div className={cx(main, px4, pb2)}>
-                <div className={cx(my1, paddingTop)}>
+                <div className={cx(my1, paddingTop, mb2)}>
                     <Breadcrumbs
                         separator={<NavigateNextIcon fontSize="small" />}
                         aria-label="Projects navigation"
@@ -111,6 +125,46 @@ export default function MontanyeWedding() {
                         Lauren and John were able to create a very customized website built off a very feature-rich theme base.
                     </Typography>
                 </div>
+                <Stack
+                    direction="row"
+                    spacing={2}
+                    sx={{
+                        textAlign: 'center !important',
+                        display: 'block !important'
+                    }}
+                    className={cx(mb3)}
+                >
+                    <Link
+                        href="https://montanyewedding.com/"
+                        title="See website at https://montanyewedding.com/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <Button
+                            startIcon={<LanguageIcon />}
+                            className={cx(buttonPrimary, buttonLink)}
+                            size="large"
+                            sx={{ marginTop: '1em !important' }}
+                        >
+                            Website Link
+                        </Button>
+                    </Link>
+                    <Link
+                        href="https://github.com/gatewayitconsulting/montanyewedding"
+                        title="See code on Github"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        <Button
+                            startIcon={<GitHubIcon />}
+                            className={cx(buttonPrimary, buttonLink)}
+                            size="large"
+                            sx={{ marginTop: '1em !important' }}
+                        >
+                            Github Link
+                        </Button>
+                    </Link>
+                </Stack>
                 <div className={cx(textCenter)}>
                     <Grid container spacing={1} sx={{ marginTop: "1em", marginBottom: "2em", paddingBottom: "3em", boxShadow: "0px 13px 27px -5px #000, 0px 8px 16px -8px #222" }}>
                         <Grid item xs={12}>
