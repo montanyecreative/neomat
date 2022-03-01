@@ -43,6 +43,46 @@ const footer = css`
 `
 
 // utilities
+const mt1 = css`
+    margin-top: 1em;
+`
+
+const mt2 = css`
+    margin-top: 2em;
+`
+
+const mt3 = css`
+    margin-top: 3em;
+`
+
+const mt4 = css`
+    margin-top: 4em;
+`
+
+const mt5 = css`
+    margin-top: 5em;
+`
+
+const mb1 = css`
+    margin-bottom: 1em;
+`
+
+const mb2 = css`
+    margin-bottom: 2em;
+`
+
+const mb3 = css`
+    margin-bottom: 3em;
+`
+
+const mb4 = css`
+    margin-bottom: 4em;
+`
+
+const mb5 = css`
+    margin-bottom: 5em;
+`
+
 const my1 = css`
     margin-top: 1em;
     margin-bottom: 1em;
@@ -98,9 +138,94 @@ const mx5 = css`
     margin-right: 5em;
 `
 
+const pt1 = css`
+    padding-top: 1em;
+`
+
+const pt2 = css`
+    padding-top: 2em;
+`
+
+const pt3 = css`
+    padding-top: 3em;
+`
+
+const pt4 = css`
+    padding-top: 4em;
+`
+
+const pt5 = css`
+    padding-top: 5em;
+`
+
+const pb1 = css`
+    padding-bottom: 1em;
+`
+
+const pb2 = css`
+    padding-bottom: 2em;
+`
+
+const pb3 = css`
+    padding-bottom: 3em;
+`
+
+const pb4 = css`
+    padding-bottom: 4em;
+`
+
+const pb5 = css`
+    padding-bottom: 5em;
+`
+
 const py1 = css`
     padding-top: 1em;
     padding-bottom: 1em;
+`
+
+const py2 = css`
+    padding-top: 2em;
+    padding-bottom: 2em;
+`
+
+const py3 = css`
+    padding-top: 3em;
+    padding-bottom: 3em;
+`
+
+const py4 = css`
+    padding-top: 4em;
+    padding-bottom: 4em;
+`
+
+const py5 = css`
+    padding-top: 5em;
+    padding-bottom: 5em;
+`
+
+const px1 = css`
+    padding-left: 1em;
+    padding-right: 1em;
+`
+
+const px2 = css`
+    padding-left: 2em;
+    padding-right: 2em;
+`
+
+const px3 = css`
+    padding-left: 3em;
+    padding-right: 3em;
+`
+
+const px4 = css`
+    padding-left: 4em;
+    padding-right: 4em;
+`
+
+const px5 = css`
+    padding-left: 5em;
+    padding-right: 5em;
 `
 
 const textCenter = css`
@@ -180,6 +305,16 @@ export {
     containerFluid,
     container,
     main,
+    mt1,
+    mt2,
+    mt3,
+    mt4,
+    mt5,
+    mb1,
+    mb2,
+    mb3,
+    mb4,
+    mb5,
     my1,
     my2,
     my3,
@@ -191,7 +326,26 @@ export {
     mx3,
     mx4,
     mx5,
+    pt1,
+    pt2,
+    pt3,
+    pt4,
+    pt5,
+    pb1,
+    pb2,
+    pb3,
+    pb4,
+    pb5,
     py1,
+    py2,
+    py3,
+    py4,
+    py5,
+    px1,
+    px2,
+    px3,
+    px4,
+    px5,
     textCenter,
     textMiddle,
     dividingLine,

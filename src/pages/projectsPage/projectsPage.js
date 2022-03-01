@@ -8,27 +8,21 @@ import ProjectListSection from "./sections/projectListSection.js";
 import Footer from "../../components/footer.js";
 
 // styles
-import { containerFluid, main, my1 } from "../../assets/styles/neomat";
+import { containerFluid, main, pb2, pt2, px4 } from "../../assets/styles/neomat";
 import { Typography } from "@mui/material";
-
-const marginLeft = css`
-    margin-left: 1em;
-`
 
 export default function ProjectsPage() {
     return (
         <div className={cx(containerFluid)}>
-            <div className={cx(main)}>
-                <BannerSection />
-                <div className={cx(my1, marginLeft)}>
-                    <BreadcrumbSection />
-                    <Typography variant="h3" gutterBottom component="div">
-                        Projects
-                    </Typography>
-                </div>
+            <BannerSection />
+            <div className={cx(main, px4, pt2, pb2)}>
+                <BreadcrumbSection />
+                <Typography variant="h3" gutterBottom component="div">
+                    Projects
+                </Typography>
                 <ProjectListSection />
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 }

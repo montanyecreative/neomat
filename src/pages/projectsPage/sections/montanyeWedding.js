@@ -10,7 +10,7 @@ import Link from '@mui/material/Link';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import { Typography } from "@mui/material";
-import { containerFluid, main, my1, my2, my3, textCenter } from "../../../assets/styles/neomat";
+import { containerFluid, main, my1, my3, pb2, px4, textCenter } from "../../../assets/styles/neomat";
 
 // icons
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
@@ -23,10 +23,6 @@ import bottomImage from "../../../assets/imgs/projects/montanye-wedding/montanye
 
 const backgroundColor = css`
     background-color: #222;
-`
-
-const marginLeft = css`
-    margin-left: 1em;
 `
 
 const marginTop = css`
@@ -62,8 +58,8 @@ export default function MontanyeWedding() {
     ];
     return (
         <div className={cx(containerFluid)}>
-            <div className={cx(main)}>
-                <div className={cx(my1, marginLeft, marginTop)}>
+            <div className={cx(main, px4, pb2)}>
+                <div className={cx(my1, marginTop)}>
                     <Breadcrumbs
                         separator={<NavigateNextIcon fontSize="small" />}
                         aria-label="Projects navigation"
@@ -116,8 +112,8 @@ export default function MontanyeWedding() {
                         className={cx(bottomPortfolioImage)}
                     />
                 </div>
-                <Footer />
             </div>
+            <Footer />
         </div >
     );
 }

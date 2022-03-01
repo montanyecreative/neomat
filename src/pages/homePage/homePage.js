@@ -9,18 +9,18 @@ import Footer from "../../components/footer.js";
 // import ProjectsSection from "./homePageSections/projects.js";
 
 // styles
-import { containerFluid, main } from "../../assets/styles/neomat";
+import { containerFluid, main, px4 } from "../../assets/styles/neomat";
 
 export default function HomePage() {
     return (
         <div className={cx(containerFluid)}>
-            <div className={cx(main)}>
-                <BannerSection />
+            <BannerSection />
+            <div className={cx(main, px4)}>
                 {/* <ProjectsSection /> */}
                 <AdvertisementsSection />
                 <ContactSection />
-                <Footer />
             </div>
+            <Footer />
         </div>
     );
 }

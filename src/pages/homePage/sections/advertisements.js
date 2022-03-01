@@ -1,5 +1,5 @@
 import React from "react";
-import { cx } from '@emotion/css';
+import { cx, css } from '@emotion/css';
 
 // core components
 import Typography from '@mui/material/Typography';
@@ -19,10 +19,14 @@ import {
     fontSize1
 } from "../../../assets/styles/neomat";
 
+const paddingTop = css`
+    padding-top: 1em;
+`
+
 export default function AdvertisementsSection() {
     return (
-        <div className={cx(my2, textCenter)}>
-            <div className={cx(my2)}>
+        <div className={cx(textCenter, paddingTop)}>
+            <div>
                 <h1>About This Website</h1>
                 <Typography paragraph className={cx(fontSize1)}>
                     This website was developed using ReactJS, JavaScript, Material Design, CSS, and HTML5.

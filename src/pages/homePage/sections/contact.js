@@ -19,6 +19,8 @@ import avatarImage from "../../../assets/imgs/john.jpg";
 
 // styles
 import {
+    mt2,
+    pb2,
     my2,
     buttonPrimary,
     buttonLink,
@@ -33,7 +35,7 @@ import {
 
 export default function ContactSection() {
     return (
-        <div className={cx(my2, textCenter)}>
+        <div className={cx(mt2, pb2, textCenter)}>
             <h1>Contact Me</h1>
             <Avatar
                 alt="John Montanye"
