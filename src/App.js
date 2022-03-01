@@ -47,9 +47,9 @@ const hide = css`
   display: none;
 `
 const neoOpenMenu = css`
-    border-radius: "50px";
-    background: "linear-gradient(225deg, #1f1f1f, #242424)";
-    box-shadow: "-7px 7px 13px #1d1d1d, 7px -7px 13px #272727";
+    border-radius: 50px;
+    background: linear-gradient(225deg, #1f1f1f, #242424);
+    box-shadow: -7px 7px 13px #1d1d1d, 7px -7px 13px #272727;
 `
 
 function App(props) {
@@ -191,8 +191,7 @@ function App(props) {
                   sx={{
                     borderRadius: "50px",
                     background: "linear-gradient(225deg, #e6e6e6, #ffffff)",
-                    boxShadow: "-7px 7px 14px #d9d9d9, 7px -7px 14px #ffffff",
-
+                    boxShadow: "-7px 7px 14px #d9d9d9, 7px -7px 14px #ffffff"
                   }}
                   aria-label="Close menu"
                 >
