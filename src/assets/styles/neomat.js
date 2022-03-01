@@ -12,6 +12,8 @@ const containerFluid = css`
 `
 
 const container = css`
+    margin-right: auto;
+    margin-left: auto;
     padding-right: 15px;
     padding-left: 15px;
     text-align: center;
@@ -228,6 +230,10 @@ const px5 = css`
     padding-right: 5em;
 `
 
+const textLeft = css`
+    text-align: left !important;
+`
+
 const textCenter = css`
     text-align: center;
 `
@@ -346,6 +352,7 @@ export {
     px3,
     px4,
     px5,
+    textLeft,
     textCenter,
     textMiddle,
     dividingLine,
