@@ -255,7 +255,7 @@ const buttonPrimary = css`
     border-width: 1px;
     padding: 11px 23px !important;
     background-color: #222 !important;
-    border-radius: 50px !important;
+    border-radius: 10px !important;
     margin: 1em;
     &:hover {
         background-color: #222 !important;
@@ -290,6 +290,12 @@ const avatar = css`
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 13px 27px -5px #000, 0px 8px 16px -8px #222;
+`
+
+const guideCoverImage = css`
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 1em !important;
 `
 
 // icons
@@ -359,6 +365,7 @@ export {
     buttonPrimary,
     buttonLink,
     avatar,
+    guideCoverImage,
     emphasis,
     icon,
     iconText,

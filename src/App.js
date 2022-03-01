@@ -32,6 +32,7 @@ import ResumePage from "./pages/resumePage/resumePage";
 import ProjectsPage from "./pages/projectsPage/projectsPage";
 import MontanyeWeddingProject from "./pages/projectsPage/sections/montanyeWedding";
 import GuidesPage from "./pages/guidesPage/guidesPage";
+import BecomeDeveloperGuide from "./pages/guidesPage/sections/guides/becomeDeveloperGuide";
 
 const theme = createTheme({
   palette: {
@@ -217,7 +218,7 @@ function App(props) {
               <Route exact path="/home" element={<HomePage />} />
               <Route path="/projects/montanye-wedding" element={<MontanyeWeddingProject />} />
               <Route path="/projects" element={<ProjectsPage />} />
-              {/* <Route path="/guides/become-a-developer" component={BecomeDeveloperGuide} />*/}
+              <Route path="/guides/become-a-developer" element={<BecomeDeveloperGuide />} />
               <Route path="/guides" element={<GuidesPage />} />
               <Route path="/resume" element={<ResumePage />} />
               <Route path="/" element={<Navigate to="/home" />} />
