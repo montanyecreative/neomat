@@ -17,7 +17,7 @@ export default function ProjectsPage() {
             <BannerSection />
             <div className={cx(main, px4, pt2, pb2)}>
                 <BreadcrumbSection />
-                <Typography variant="h3" gutterBottom component="div">
+                <Typography variant="h3" gutterBottom component="h3">
                     Projects
                 </Typography>
                 <ProjectListSection />

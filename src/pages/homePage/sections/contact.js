@@ -36,7 +36,9 @@ import {
 export default function ContactSection() {
     return (
         <div className={cx(mt2, pb2, textCenter)}>
-            <h1>Contact Me</h1>
+            <Typography variant="h4" gutterBottom component="h4">
+                Contact Me
+            </Typography>
             <Avatar
                 alt="John Montanye"
                 src={avatarImage}

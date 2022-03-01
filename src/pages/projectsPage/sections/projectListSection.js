@@ -65,7 +65,7 @@ export default function ProjectListSection() {
                 >
                     <Item key={16} elevation={16} className={cx(montanyeWedding)} />
                     <div className={cx(textMiddle, mx1)}>
-                        <Typography variant="h4" component="div">
+                        <Typography variant="h4" component="h4">
                             Montanye Wedding
                         </Typography>
                         <Typography>
@@ -98,7 +98,7 @@ export default function ProjectListSection() {
                 >
                     <Item key={16} elevation={16} className={cx(githubProject)} />
                     <div className={cx(textMiddle, mx1)}>
-                        <Typography variant="h4" component="div">
+                        <Typography variant="h4" component="h4">
                             GitHub Enhanced README
                         </Typography>
                         <Typography>
@@ -133,7 +133,7 @@ export default function ProjectListSection() {
                 >
                     <Item key={16} elevation={16} className={cx(thePalateSTL)} />
                     <div className={cx(textMiddle, mx1)}>
-                        <Typography variant="h4" component="div">
+                        <Typography variant="h4" component="h4">
                             The Palate STL
                         </Typography>
                         <Typography>

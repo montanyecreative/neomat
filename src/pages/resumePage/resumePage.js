@@ -28,10 +28,10 @@ const paddingTop = css`
 
 export default function ResumePage() {
     return (
-        <div className={cx(containerFluid, textCenter)}>
-            <div className={cx(main, px4, pt2, pb2)}>
+        <div className={cx(containerFluid)}>
+            <div className={cx(main, px4, pt2, pb2, textCenter)}>
                 <div className={cx(backgroundColor, paddingTop)}>
-                    <Typography variant="h3" gutterBottom component="div">
+                    <Typography variant="h3" gutterBottom component="h3">
                         Resume
                     </Typography>
                     <Typography variant="body1">

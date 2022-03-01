@@ -27,7 +27,9 @@ export default function AdvertisementsSection() {
     return (
         <div className={cx(textCenter, paddingTop)}>
             <div>
-                <h1>About This Website</h1>
+                <Typography variant="h4" gutterBottom component="h4">
+                    About This Website
+                </Typography>
                 <Typography paragraph className={cx(fontSize1)}>
                     This website was developed using ReactJS, JavaScript, Material Design, CSS, and HTML5.
                     The different looking style is based off a design pattern I call neomat, which blends concepts
@@ -51,7 +53,9 @@ export default function AdvertisementsSection() {
                 </Link>
             </div>
             <div className={cx(my2)}>
-                <h1>Professional Guides</h1>
+                <Typography variant="h4" gutterBottom component="h4">
+                    Professional Guides
+                </Typography>
                 <Typography paragraph>
                     Check out my guides on getting more familiar with website development
                     and software engineering related paths and concepts.
