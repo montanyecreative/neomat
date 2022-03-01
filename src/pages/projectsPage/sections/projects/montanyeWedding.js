@@ -146,7 +146,7 @@ export default function MontanyeWedding() {
                             size="large"
                             sx={{ marginTop: '1em !important' }}
                         >
-                            Website Link
+                            See Website
                         </Button>
                     </Link>
                     <Link
@@ -161,12 +161,12 @@ export default function MontanyeWedding() {
                             size="large"
                             sx={{ marginTop: '1em !important' }}
                         >
-                            Github Link
+                            See Github
                         </Button>
                     </Link>
                 </Stack>
                 <div className={cx(textCenter)}>
-                    <Grid container spacing={1} sx={{ marginTop: "1em", marginBottom: "2em", paddingBottom: "3em", boxShadow: "0px 13px 27px -5px #000, 0px 8px 16px -8px #222" }}>
+                    <Grid container spacing={1} sx={{ marginTop: "1em", marginBottom: "2em", paddingBottom: "3em", boxShadow: "0px 13px 27px -5px #000, 0px 8px 16px -8px #222", borderRadius: "5px" }}>
                         <Grid item xs={12}>
                             <Typography variant="h4" component="h4" color="white" sx={{ marginTop: '1em !important' }}>
                                 Languages &amp; Technologies
