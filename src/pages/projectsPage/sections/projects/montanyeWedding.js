@@ -45,6 +45,7 @@ import mailchimpImage from "../../../../assets/imgs/skills/mailchimp.svg";
 import sassImage from "../../../../assets/imgs/skills/sass.svg";
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LanguageIcon from '@mui/icons-material/Language';
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 // images
 import montanyeWeddingHomePage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-home.png";
@@ -147,6 +148,7 @@ export default function MontanyeWedding() {
                         className={cx(backgroundColor)}
                     >
                         <Link underline="hover" key="1" color="white" href="/projects">
+                            <ArrowBackIcon sx={{ fontSize: ".8rem", marginRight: '.5em' }} />
                             All Projects
                         </Link>,
                         <Link underline="hover" key="2" color="white" href="/projects/montanye-wedding">

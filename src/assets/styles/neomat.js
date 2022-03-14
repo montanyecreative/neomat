@@ -221,8 +221,12 @@ const px3 = css`
 `
 
 const px4 = css`
-    padding-left: 4em;
-    padding-right: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    @media (min-width: 576px) {
+        padding-left: 4em;
+        padding-right: 4em;
+    }
 `
 
 const px5 = css`

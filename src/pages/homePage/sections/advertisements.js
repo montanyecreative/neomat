@@ -20,7 +20,7 @@ import {
 } from "../../../assets/styles/neomat";
 
 const paddingTop = css`
-    padding-top: 1em;
+    padding-top: 3em;
 `
 
 export default function AdvertisementsSection() {
