@@ -14,6 +14,10 @@ import Avatar from '@mui/material/Avatar';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
+import PropTypes from 'prop-types';
 import { Typography } from "@mui/material";
 import {
     containerFluid,
@@ -47,6 +51,7 @@ import montanyeWeddingHomePage from "../../../../assets/imgs/projects/montanye-w
 import montanyeWeddingWhenWherePage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-whenwhere.png";
 import montanyeWeddingRSVPPage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-vendors.png";
 import bottomImage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-rsvp.png";
+import mailchimpLayoutImage from "../../../../assets/imgs/projects/montanye-wedding/mailchimp-save-the-date.png";
 
 const backgroundColor = css`
     background-color: #222;
@@ -77,6 +82,38 @@ const avatarStyles = css`
     box-shadow: 0px 13px 27px -5px #000, 0px 8px 16px -8px #222;
 `
 
+function TabPanel(props) {
+    const { children, value, index, ...other } = props;
+
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box sx={{ p: 3 }}>{children}
+                </Box>
+            )}
+        </div>
+    );
+}
+
+TabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+    return {
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
+
 export default function MontanyeWedding() {
     const itemData = [
         {
@@ -92,6 +129,13 @@ export default function MontanyeWedding() {
             title: 'RSVP Page',
         },
     ];
+
+    const [value, setValue] = React.useState(0);
+
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
+
     return (
         <div className={cx(containerFluid)}>
             <div className={cx(main, px4, pb2)}>
@@ -112,18 +156,50 @@ export default function MontanyeWedding() {
                     <Typography variant="h3" gutterBottom component="h3">
                         Montanye Wedding
                     </Typography>
-                    <Typography variant="body1" gutterBottom component="div">
-                        The Montanyes were looking to get married and wanted a premium and faithfully artistic representation of their relationship to convey to those looking for a glimpse of their big day. Fortunately, the groom-to-be, John Montanye (the designer/developer of JMDesigns.io) was happy to take on the project and pour his heart/soul into making a website that did just that.
-                    </Typography>
-                    <Typography variant="body1" gutterBottom component="div">
-                        John knew that he could come up with the code to accomplish whatever bride-to-be Lauren wanted done, so the couple began doing design discoveries to come up with an overall look and feel to the website. Lauren and John's taste was rather dark, but they wanted a refined approach. They picked out basic structure and settled on the beautiful cursive font: <span className={cx(cursiveFont)}>Alex Brush</span>
-                    </Typography>
-                    <Typography variant="body1" gutterBottom component="div">
-                        After the initial design was picked out, John set out to find a framework and UI library that could help him develop the website and also save time (he started working at New Balance when this project took off). He came up with a Creative Tim developed React and Material Design theme. Building off the base theme and modifying the existing theme significantly, John was able to tailor the theme to his and Lauren's exact creative needs. By adding extras like being able to Save the Date to calendars, an animated timeline that highlighted favorite moments from the relationship, a countdown timer to the event date, a vendors page to show off vendors from the event, and an RSVP page.
-                    </Typography>
-                    <Typography variant="body1" gutterBottom component="div">
-                        Lauren and John were able to create a very customized website built off a very feature-rich theme base.
-                    </Typography>
+                    <Paper elevation={13} sx={{ backgroundColor: '#222 !important', color: '#FFF' }} className={cx(py1)}>
+                        <Box sx={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }}>
+                            <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                                <Tabs value={value} onChange={handleChange} aria-label="Objectives, processes, solutions tabs" variant="fullWidth" textColor="inherit" centered>
+                                    <Tab label="Objectives" {...a11yProps(0)} />
+                                    <Tab label="Processes" {...a11yProps(1)} />
+                                    <Tab label="Solutions" {...a11yProps(2)} />
+                                </Tabs>
+                            </Box>
+                            <TabPanel value={value} index={0}>
+                                <ul style={{ textAlign: 'center', listStylePosition: 'inside' }}>
+                                    <li>Create a beautiful wedding website</li>
+                                    <li>Focus on cursive font and sleek monochrome design</li>
+                                    <li>Setup a countdown timer to wedding day</li>
+                                    <li>Allow attendees to save the date to their calendar</li>
+                                    <li>Allow attendees to RSVP to the event</li>
+                                    <li>Keep attendees updated on event details through email</li>
+                                    <li>Promote the vendors digitally</li>
+                                    <li>Give as much information about the event as possible</li>
+                                </ul>
+                            </TabPanel>
+                            <TabPanel value={value} index={1}>
+                                <ul style={{ textAlign: 'center', listStylePosition: 'inside' }}>
+                                    <li>Found a themed codebase that could be quickly scaled and effectively managed</li>
+                                    <li>Communicated about and designed website layout, colors, and fonts</li>
+                                    <li>Started to customize and add functionality to codebase</li>
+                                    <li>Selected Mailchimp as email client and began creating wedding email segment list</li>
+                                    <li>Started implementing various plugins, developing some from scratch</li>
+                                    <li>Collaborated with fellow developer to create API for attendee RSVPs</li>
+                                    <li>Constantly asked for approval/feedback from website owners to improve site</li>
+                                </ul>
+                            </TabPanel>
+                            <TabPanel value={value} index={2}>
+                                <ul style={{ textAlign: 'center', listStylePosition: 'inside' }}>
+                                    <li>Mailchimp powered all the emails sent to attendees</li>
+                                    <li>Scaling a theme allowed faster development of plugins</li>
+                                    <li>Was able to remove unnecessary code from theme</li>
+                                    <li>API collaboration provided high quality form and DB functionality</li>
+                                    <li>Augmented theme with countdown timer, calendar, RSVPs, vendor page</li>
+                                    <li>Implemented Google Analytics to understand most used pages</li>
+                                </ul>
+                            </TabPanel>
+                        </Box>
+                    </Paper>
                 </div>
                 <Stack
                     direction="row"
@@ -258,6 +334,12 @@ export default function MontanyeWedding() {
                         <img
                             src={bottomImage}
                             className={cx(bottomPortfolioImage)}
+                            alt="Montanye Wedding RSVP page layout"
+                        />
+                        <img
+                            src={mailchimpLayoutImage}
+                            className={cx(bottomPortfolioImage)}
+                            alt="Montanye Wedding Mailchimp Save the Date email layout"
                         />
                     </div>
                 </Paper>

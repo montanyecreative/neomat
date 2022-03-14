@@ -105,7 +105,7 @@ export default function ProjectListSection() {
                             An enhanced README for my main GitHub repo. Highlights langauges and technologies I use as well as GitHub statistics that are updated daily from API.
                         </Typography>
                         <Link
-                            href="/"
+                            href="https://github.com/gatewayitconsulting/gatewayitconsulting"
                             title="See enhanced GitHub README"
                             target="_blank"
                             rel="noopener"
@@ -137,10 +137,10 @@ export default function ProjectListSection() {
                             The Palate STL
                         </Typography>
                         <Typography>
-                            A local food finder app written in HTML5, CSS3, JavaScript, and PHP.
+                            A local food finder app written in HTML5, CSS3, JavaScript, WordPress, and PHP. No longer actively maintained.
                         </Typography>
                         <Link
-                            href="/"
+                            href="https://thepalatestl.com/"
                             title="See The Palate STL's project"
                             target="_blank"
                             rel="noopener"
