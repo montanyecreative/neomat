@@ -10,17 +10,59 @@ import Link from '@mui/material/Link';
 import BookIcon from '@mui/icons-material/Book';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
+// images
+import bannerImage from "../../../assets/imgs/trailhead1.jpeg";
+
 // styles
 import {
     my2,
     buttonPrimary,
     buttonLink,
     textCenter,
-    fontSize1
+    fontSize1,
+    buttonSalesforce,
+    white
 } from "../../../assets/styles/neomat";
 
 const paddingTop = css`
     padding-top: 3em;
+`
+
+const customTitle = css`
+    flex: 0 0 100%;
+    text-align: center;
+    color: #FFF;
+`
+
+const bannerStyle = css`
+    transform: translate3d(0px, 0px, 0px);
+    background-image: url(${bannerImage});
+    background-size: cover;
+    background-position: 50%;
+    height: 65vh;
+    min-height: 65vh;
+    max-height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+`
+
+const bannerCopyContainer = css`
+    width: 100%;
+    z-index: 1;
+    "@media (min-width: 576px)": {
+        max-width: 540px;
+    }
+    "@media (min-width: 768px)": {
+        max-width: 720px;
+    },
+    "@media (min-width: 992px)": {
+        max-width: 960px;
+    },
+    "@media (min-width: 1200px)": {
+        max-width: 1140px;
+    }
 `
 
 export default function AdvertisementsSection() {
@@ -51,6 +93,35 @@ export default function AdvertisementsSection() {
                         Github
                     </Button>
                 </Link>
+            </div>
+            <div className={cx(my2)}>
+                <Typography variant="h4" gutterBottom component="h4">
+                    My Salesforce Journey
+                </Typography>
+                <Typography paragraph>
+                    I work by day as a Salesforce Commerce Cloud Developer. Trailhead has become my #1 resource aside from work to become B2C certified. Follow my Salesforce journey on Trailhead or connect with me on <Link href="https://www.linkedin.com/in/john-montanye/"
+                        title="Connect with me on LinkedIn"
+                        target="_blank"
+                        rel="noopener" color={white}>LinkedIn!</Link>
+                </Typography>
+            </div>
+            <div className={cx(bannerStyle)}>
+                <div className={cx(bannerCopyContainer)}>
+                    <Link
+                        href="https://trailblazer.me/id/johnmontanye"
+                        title="See Trailblazer page"
+                        target="_blank"
+                        rel="noopener"
+                        style={{ textDecoration: 'none' }}
+                    >
+                        <Button
+                            className={cx(buttonSalesforce, buttonLink)}
+                            aria-label="See Trailblazer page"
+                        >
+                            Trailblazer Profile
+                        </Button>
+                    </Link>
+                </div>
             </div>
             <div className={cx(my2)}>
                 <Typography variant="h4" gutterBottom component="h4">

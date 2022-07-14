@@ -54,6 +54,6 @@ export default function BannerSection() {
                     John Montanye, creative <br /> &amp; software engineer.
                 </Typography>
             </div>
-        </div >
+        </div>
     );
 }

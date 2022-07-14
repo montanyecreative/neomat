@@ -267,6 +267,19 @@ const buttonPrimary = css`
     }
 `
 
+const buttonSalesforce = css`
+    border-width: 1px;
+    padding: 11px 23px !important;
+    background-color: #00A1DF !important;
+    border-radius: 10px !important;
+    margin: 1em;
+    min-width: 225px;
+    &:hover {
+        background-color: #00A1DF !important;
+        opacity: .95 !important;
+    }
+`
+
 const buttonLink = css`
     color: white !important;
     text-decoration: none !important;
@@ -376,5 +389,6 @@ export {
     iconText,
     fontSize1,
     linkOverrides,
-    footer
+    footer,
+    buttonSalesforce
 };
