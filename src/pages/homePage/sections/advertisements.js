@@ -96,6 +96,25 @@ export default function AdvertisementsSection() {
             </div>
             <div className={cx(my2)}>
                 <Typography variant="h4" gutterBottom component="h4">
+                    Professional Guides
+                </Typography>
+                <Typography paragraph>
+                    Check out my guides on getting more familiar with website development
+                    and software engineering related paths and concepts.
+                </Typography>
+                <Link href="/Guides" title="See guides">
+                    <Button
+                        className={cx(buttonPrimary, buttonLink)}
+                        startIcon={<BookIcon />}
+                        id="buttonIconGuides"
+                        aria-label="See guides"
+                    >
+                        See guides
+                    </Button>
+                </Link>
+            </div>
+            <div className={cx(my2)}>
+                <Typography variant="h4" gutterBottom component="h4">
                     My Salesforce Journey
                 </Typography>
                 <Typography paragraph>
@@ -122,25 +141,6 @@ export default function AdvertisementsSection() {
                         </Button>
                     </Link>
                 </div>
-            </div>
-            <div className={cx(my2)}>
-                <Typography variant="h4" gutterBottom component="h4">
-                    Professional Guides
-                </Typography>
-                <Typography paragraph>
-                    Check out my guides on getting more familiar with website development
-                    and software engineering related paths and concepts.
-                </Typography>
-                <Link href="/Guides" title="See guides">
-                    <Button
-                        className={cx(buttonPrimary, buttonLink)}
-                        startIcon={<BookIcon />}
-                        id="buttonIconGuides"
-                        aria-label="See guides"
-                    >
-                        See guides
-                    </Button>
-                </Link>
             </div>
         </div>
     );
