@@ -16,7 +16,6 @@ export default function HomePage() {
         <div className={cx(containerFluid)}>
             <BannerSection />
             <div className={cx(main, px4)}>
-                {/* <ProjectsSection /> */}
                 <AdvertisementsSection />
                 <ContactSection />
             </div>
