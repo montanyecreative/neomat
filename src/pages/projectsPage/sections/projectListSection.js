@@ -109,16 +109,14 @@ export default function ProjectListSection() {
                             An enhanced README for my main GitHub repo. Highlights langauges and technologies I use as well as GitHub statistics that are updated daily from API.
                         </Typography>
                         <Link
-                            href="https://github.com/gatewayitconsulting/gatewayitconsulting"
-                            title="See enhanced GitHub README"
-                            target="_blank"
-                            rel="noopener"
+                            href="/projects/github-readme"
+                            title="See enhanced GitHub README project"
                             sx={{ width: '100%' }}
                         >
                             <Button
                                 className={cx(buttonPrimary, buttonLink)}
                                 startIcon={<VisibilityIcon />}
-                                aria-label="See enhanced GitHub README"
+                                aria-label="See enhanced GitHub README project"
                             >
                                 See project
                             </Button>
