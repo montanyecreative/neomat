@@ -53,6 +53,9 @@ const githubProject = css`
 export default function ProjectListSection() {
     return (
         <div>
+            <Typography variant="body1">
+                I have worked many other projects that are not shown here as I do not have direct permission from clients to share works as per contracted agreements but those brands and sites include: <i>New Balance, Johnston &amp; Murphy, Sheet Music Plus, Cherished Memories, ReserveBar, LuxeDecor, SyllogisTeks, PohlmanUSA, and Our Lady's Inn.</i> See <Link href="/resume" title="See resume page" sx={{ color: '#FFF', textDecoration: 'underline' }}>resume</Link> for details.
+            </Typography>
             <div>
                 <Box
                     sx={{
@@ -65,15 +68,16 @@ export default function ProjectListSection() {
                 >
                     <Item key={16} elevation={16} className={cx(montanyeWedding)} />
                     <div className={cx(textMiddle, mx1)}>
-                        <Typography variant="h4" component="h4">
+                        <Typography variant="h4" component="h4" sx={{ width: '100%' }}>
                             Montanye Wedding
                         </Typography>
-                        <Typography>
+                        <Typography sx={{ width: '100%' }}>
                             Wedding website for the Montanye wedding built in Material Design 4.0 and React. Powered on the backend by POSTgres and Node.js.
                         </Typography>
                         <Link
                             href="/projects/montanye-wedding"
                             title="See Montanye Wedding project"
+                            sx={{ width: '100%' }}
                         >
                             <Button
                                 className={cx(buttonPrimary, buttonLink)}
@@ -98,10 +102,10 @@ export default function ProjectListSection() {
                 >
                     <Item key={16} elevation={16} className={cx(githubProject)} />
                     <div className={cx(textMiddle, mx1)}>
-                        <Typography variant="h4" component="h4">
+                        <Typography variant="h4" component="h4" sx={{ width: '100%' }}>
                             GitHub Enhanced README
                         </Typography>
-                        <Typography>
+                        <Typography sx={{ width: '100%' }}>
                             An enhanced README for my main GitHub repo. Highlights langauges and technologies I use as well as GitHub statistics that are updated daily from API.
                         </Typography>
                         <Link
@@ -109,6 +113,7 @@ export default function ProjectListSection() {
                             title="See enhanced GitHub README"
                             target="_blank"
                             rel="noopener"
+                            sx={{ width: '100%' }}
                         >
                             <Button
                                 className={cx(buttonPrimary, buttonLink)}
@@ -133,10 +138,10 @@ export default function ProjectListSection() {
                 >
                     <Item key={16} elevation={16} className={cx(thePalateSTL)} />
                     <div className={cx(textMiddle, mx1)}>
-                        <Typography variant="h4" component="h4">
+                        <Typography variant="h4" component="h4" sx={{ width: '100%' }}>
                             The Palate STL
                         </Typography>
-                        <Typography>
+                        <Typography sx={{ width: '100%' }}>
                             A local food finder app written in HTML5, CSS3, JavaScript, WordPress, and PHP. No longer actively maintained.
                         </Typography>
                         <Link
@@ -144,6 +149,7 @@ export default function ProjectListSection() {
                             title="See The Palate STL's project"
                             target="_blank"
                             rel="noopener"
+                            sx={{ width: '100%' }}
                         >
                             <Button
                                 className={cx(buttonPrimary, buttonLink)}

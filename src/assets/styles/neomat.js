@@ -322,6 +322,7 @@ const icon = css`
     vertical-align: middle;
     margin-right: .2em;
 `
+
 const iconText = css`
     color: #FFF;
     display: inline;

@@ -36,7 +36,8 @@ export default function ExperienceSection() {
                         <Typography variant="h4" component="h3" style={{ display: "inline" }}>Ignition Commerce</Typography>
                     </div>
                     <Typography variant="h5" component="h3" style={{ display: "inline" }}>Salesforce Commerce Cloud Developer</Typography>
-                    <Typography variant="body1" style={{ marginLeft: "1em", marginTop: ".25em" }}>- Currently working</Typography>
+                    <Typography variant="body1" style={{ marginLeft: "1em", marginTop: ".25em" }}>Brands/sites worked include Johnston &amp; Murphy, Sheet Music Plus, Cherished Memories, ReserveBar, and LuxeDecor.</Typography>
+                    <Typography variant="body1" style={{ marginLeft: "1em", marginTop: ".25em" }}>- Currently working, technologies hidden for client privacy.</Typography>
                 </Grid>
                 <Grid item xs={12} style={{ marginTop: "3em" }}>
                     <div style={{ display: "flex", alignItems: "center", borderTop: "1px solid #FFF", paddingTop: "1em" }}>
