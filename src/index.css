@@ -90,3 +90,7 @@ button:hover {
 #root {
   overflow: hidden;
 }
+
+.MuiSlider-markLabel {
+  color: #FFF !important;
+}

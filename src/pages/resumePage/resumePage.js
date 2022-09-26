@@ -3,6 +3,8 @@ import { cx, css } from '@emotion/css';
 
 // sections of this page
 import Footer from "../../components/footer.js";
+import Intro from "./sections/intro";
+import Matrix from "./sections/matrix";
 import Experience from "./sections/experience";
 import Education from "./sections/education";
 import Skills from "./sections/skills";
@@ -34,10 +36,13 @@ export default function ResumePage() {
                     <Typography variant="h3" gutterBottom component="h3">
                         Resume
                     </Typography>
-                    <Typography variant="body1">
+                    {/* <Typography variant="body1">
                         <i>Currently only looking for small freelance projects outside of 8am-6pm schedule.</i>
-                    </Typography>
+                    </Typography> */}
                     <Typography sx={{ marginTop: '1.5em !important' }}>
+                        <Link href="#highlights" className={cx(navLink)}>
+                            Highlights
+                        </Link>
                         <Link href="#experience" className={cx(navLink)}>
                             Experience
                         </Link>
@@ -48,6 +53,8 @@ export default function ResumePage() {
                             Skills
                         </Link>
                     </Typography>
+                    <Intro />
+                    <Matrix />
                     <Experience />
                     <Education />
                     <Skills />

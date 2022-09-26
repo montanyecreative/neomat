@@ -28,11 +28,11 @@ const paddingTop = css`
     padding-top: 3em;
 `
 
-const customTitle = css`
-    flex: 0 0 100%;
-    text-align: center;
-    color: #FFF;
-`
+// const customTitle = css`
+//     flex: 0 0 100%;
+//     text-align: center;
+//     color: #FFF;
+// `
 
 const bannerStyle = css`
     transform: translate3d(0px, 0px, 0px);
