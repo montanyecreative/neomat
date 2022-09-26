@@ -94,3 +94,8 @@ button:hover {
 .MuiSlider-markLabel {
   color: #FFF !important;
 }
+
+.MuiButtonBase-root, .MuiButtonBase-root:hover {
+  background-color: #FFF !important;
+  color: #222 !important;
+}

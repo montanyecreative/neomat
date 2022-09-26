@@ -45,7 +45,9 @@ export default function ExperienceSection() {
                         Salesforce Commerce Cloud Developer
                     </Typography>
                     <Typography variant="body1" style={{ marginLeft: "1em", marginTop: ".25em" }}>
-                        Brands/sites worked include Johnston &amp; Murphy, Sheet Music Plus, Cherished Memories, ReserveBar, and LuxeDecor.
+                        <i>
+                            Brands/sites worked include Johnston &amp; Murphy, Sheet Music Plus, Cherished Memories, ReserveBar, and LuxeDecor.
+                        </i>
                     </Typography>
                     <Typography variant="body1" style={{ marginLeft: "1em", marginTop: ".25em" }}>
                         - Developed several Salesforce Commerce Cloud components for Page Designer using ISML, Bootstrap, SASS, and JavaScript to help clients facilitate content production migrating to SFRA.
