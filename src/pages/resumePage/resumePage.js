@@ -40,6 +40,9 @@ export default function ResumePage() {
                         <i>Currently only looking for small freelance projects outside of 8am-6pm schedule.</i>
                     </Typography> */}
                     <Typography sx={{ marginTop: '1.5em !important' }}>
+                        <Link href="#intro" className={cx(navLink)}>
+                            Intro
+                        </Link>
                         <Link href="#highlights" className={cx(navLink)}>
                             Highlights
                         </Link>
