@@ -27,8 +27,8 @@ export default function MatrixSection() {
         <div className={cx(textCenter)}>
             <Grid container spacing={1} style={{ textAlign: "left", marginTop: "1em", marginBottom: "2em", paddingLeft: "2em", paddingRight: "2em" }} id='highlights'>
                 <Grid item xs={12}>
-                    <TableContainer sx={{ boxShadow: '8px 9px 27px -9px #000, 0px 8px 16px -8px #222', borderRadius: '4px' }}>
-                        <Table style={{ minWidth: 650, backgroundColor: '#222' }} aria-label="simple table">
+                    <TableContainer sx={{ boxShadow: '8px 9px 27px -9px #000, 0px 8px 16px -8px #222', borderRadius: '6px' }}>
+                        <Table style={{ minWidth: 650, backgroundColor: '#222' }} size="small" aria-label="Skills matrix">
                             <TableHead>
                                 <TableRow>
                                     <TableCell style={{ fontWeight: "bold", color: '#FFF' }}>Skill</TableCell>
