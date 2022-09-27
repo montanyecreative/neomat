@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import SpeedDial from '@mui/material/SpeedDial';
 import SpeedDialIcon from '@mui/material/SpeedDialIcon';
 import SpeedDialAction from '@mui/material/SpeedDialAction';
+// import Modal from '@mui/material/Modal';
 
 // sections of this page
 import Footer from "../../components/footer.js";
@@ -19,7 +20,10 @@ import Skills from "./sections/skills";
 import DownloadIcon from '@mui/icons-material/Download';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import NorthIcon from '@mui/icons-material/North';
-import ShareIcon from '@mui/icons-material/Share';
+// import ShareIcon from '@mui/icons-material/Share';
+
+// assets
+import resumeLink from '../../assets/john-montanye-resume.pdf';
 
 // styles
 import { containerFluid, main, pb2, pt2, px4, textCenter } from "../../assets/styles/neomat";
@@ -41,20 +45,40 @@ const paddingTop = css`
 `
 
 const actions = [
-    { icon: <DownloadIcon />, name: 'Download resume' },
-    { icon: <MailOutlineIcon />, name: 'Contact me' },
-    { icon: <NorthIcon />, name: 'To top of page' },
-    { icon: <ShareIcon />, name: 'Share page' },
+    { icon: <DownloadIcon />, name: 'Download resume', action: handleDownload },
+    { icon: <MailOutlineIcon />, name: 'Contact me', action: handleEmail },
+    // { icon: <ShareIcon />, name: 'Share page', action: handleShareOpen },
+    { icon: <NorthIcon />, name: 'To top of page', action: handleToTop },
 ];
+
+function handleDownload() {
+    window.open(resumeLink);
+};
+
+function handleEmail() {
+    var emailAddress = 'jmontanye24@gmail.com';
+    document.location = 'mailto:' + emailAddress;
+};
+
+// function handleShareOpen() {
+//     handleModalOpen();
+// };
+
+function handleToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
 
 export default function ResumePage() {
     const [open, setOpen] = React.useState(false);
+    // const [open, setOpen, openModal, setModalOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    // const handleModalOpen = () => setModalOpen(true);
+    // const handleModalClose = () => setModalOpen(false);
 
     return (
         <div className={cx(containerFluid)}>
-            <div>
+            <div id="resumeActions">
                 <Box sx={{ height: 320, transform: 'translateZ(0px)', flexGrow: 1, position: 'fixed', bottom: '25px', right: '0', zIndex: '999' }}>
                     <SpeedDial
                         ariaLabel="SpeedDial controlled open example"
@@ -69,7 +93,7 @@ export default function ResumePage() {
                                 key={action.name}
                                 icon={action.icon}
                                 tooltipTitle={action.name}
-                                onClick={handleClose}
+                                onClick={action.action}
                             />
                         ))}
                     </SpeedDial>
@@ -108,6 +132,21 @@ export default function ResumePage() {
                 </div>
             </div>
             <Footer />
+            {/* <Modal
+                open={openModal}
+                onClose={handleModalClose}
+                aria-labelledby="modal-modal-title"
+                aria-describedby="modal-modal-description"
+            >
+                <Box>
+                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                        Text in a modal
+                    </Typography>
+                    <Typography id="modal-modal-description">
+                        Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                    </Typography>
+                </Box>
+            </Modal> */}
         </div>
     );
 }
