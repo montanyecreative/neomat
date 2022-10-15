@@ -1,6 +1,10 @@
 import React from "react";
 // import { cx, css } from '@emotion/css';
 
+// plugins
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
+
 // styles
 // import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -13,6 +17,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 //     buttonPrimary,
 //     buttonLink
 // } from '../../../assets/styles/neomat.js';
+
 
 // images
 import image1 from "../../../assets/imgs/photography/bird-at-lake.jpg";
@@ -60,14 +65,16 @@ export default function PhotographsSection() {
             <Box sx={{ boxShadow: "0px 13px 27px -5px #000, 0px 8px 16px -8px #222" }}>
                 <ImageList variant="masonry" cols={3} gap={9}>
                     {itemData.map((item) => (
-                    <ImageListItem key={item.img}>
-                        <img
-                        src={`${item.img}?w=248&fit=crop&auto=format`}
-                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                        alt={item.title}
-                        loading="lazy"
-                        />
-                    </ImageListItem>
+                        <Zoom>
+                            <ImageListItem key={item.img}> 
+                                <img
+                                    src={`${item.img}?w=248&fit=crop&auto=format`}
+                                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                    alt={item.title}
+                                    loading="lazy"
+                                />
+                            </ImageListItem>
+                        </Zoom>
                     ))}
                 </ImageList>
             </Box>
