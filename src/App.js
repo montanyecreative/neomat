@@ -25,6 +25,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import DesktopMacIcon from '@mui/icons-material/DesktopMac';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
+import CameraAltIcon from '@mui/icons-material/CameraAlt';
 
 // components/sections
 import HomePage from "./pages/homePage/homePage";
@@ -34,6 +35,7 @@ import MontanyeWeddingProject from "./pages/projectsPage/sections/projects/monta
 import GitHubReadmeProject from "./pages/projectsPage/sections/projects/githubReadme";
 import GuidesPage from "./pages/guidesPage/guidesPage";
 import BecomeDeveloperGuide from "./pages/guidesPage/sections/guides/becomeDeveloperGuide";
+import PhotographyPage from "./pages/photographyPage/photographyPage";
 
 const theme = createTheme({
   palette: {
@@ -85,7 +87,7 @@ function App(props) {
       </div>
       <Divider />
       <List>
-        {["Home", "Projects", "Resume", "Guides"].map((text, index) => (
+        {["Home", "Projects", "Resume", "Guides", "Photography"].map((text, index) => (
           <ListItem
             key={text}
             component={Link}
@@ -106,6 +108,7 @@ function App(props) {
               {index === 1 ? <DesktopMacIcon /> : <span></span>}
               {index === 2 ? <AssignmentIcon /> : <span></span>}
               {index === 3 ? <LibraryBooksIcon /> : <span></span>}
+              {index === 4 ? <CameraAltIcon /> : <span></span>}
             </ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
@@ -223,6 +226,7 @@ function App(props) {
               <Route path="/guides/become-a-developer" element={<BecomeDeveloperGuide />} />
               <Route path="/guides" element={<GuidesPage />} />
               <Route path="/resume" element={<ResumePage />} />
+              <Route path="/photography" element={<PhotographyPage />} />
               <Route path="/" element={<Navigate to="/home" />} />
             </Routes>
           </main>
