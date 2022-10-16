@@ -27,6 +27,10 @@ import image4 from "../../../assets/imgs/photography/roses-white.jpg";
 import image5 from "../../../assets/imgs/photography/roses.jpg";
 import image6 from "../../../assets/imgs/photography/tree-at-lake.jpg";
 import image7 from "../../../assets/imgs/photography/turn-in-path-red.jpg";
+import image8 from "../../../assets/imgs/photography/lake-bridge.jpg";
+import image9 from "../../../assets/imgs/photography/tower-in-trees.jpg";
+import image10 from "../../../assets/imgs/photography/lake-sky-view.jpg";
+import image11 from "../../../assets/imgs/photography/lake-reeds-white.jpg";
 
 const itemData = [
     {
@@ -57,13 +61,29 @@ const itemData = [
       img: image7,
       title: 'Turn in the path',
     },
+    {
+      img: image8,
+      title: 'Stone bridge in lake',
+    },
+    {
+      img: image9,
+      title: 'Wooden tower in the trees',
+    },
+    {
+      img: image10,
+      title: 'Grass and trees with lake and sky in the background',
+    },
+    {
+      img: image11,
+      title: 'Lake reeds and surface algae',
+    },
   ];
 
 export default function PhotographsSection() {
     return (
         <div>
             <Box sx={{ boxShadow: "0px 13px 27px -5px #000, 0px 8px 16px -8px #222" }}>
-                <ImageList variant="masonry" cols={3} gap={9}>
+                <ImageList variant="masonry" cols={3} gap={9} sx={{ overflowX: "hidden" }}>
                     {itemData.map((item) => (
                         <Zoom>
                             <ImageListItem key={item.img}> 
