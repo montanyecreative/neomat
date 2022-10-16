@@ -36,46 +36,57 @@ const itemData = [
     {
       img: image1,
       title: 'Bird at the lake',
+      category: 'infrared',
     },
     {
       img: image2,
       title: 'Nature lake red',
+      category: 'infrared',
     },
     {
       img: image3,
       title: 'Nature lake white',
+      category: 'infrared',
     },
     {
       img: image4,
       title: 'Roses white',
+      category: 'infrared',
     },
     {
       img: image5,
       title: 'Roses red',
+      category: 'infrared',
     },
     {
       img: image6,
       title: 'Tree at the lake',
+      category: 'infrared',
     },
     {
       img: image7,
       title: 'Turn in the path',
+      category: 'infrared',
     },
     {
       img: image8,
       title: 'Stone bridge in lake',
+      category: 'infrared',
     },
     {
       img: image9,
       title: 'Wooden tower in the trees',
+      category: 'infrared',
     },
     {
       img: image10,
       title: 'Grass and trees with lake and sky in the background',
+      category: 'infrared',
     },
     {
       img: image11,
       title: 'Lake reeds and surface algae',
+      category: 'infrared',
     },
   ];
 
