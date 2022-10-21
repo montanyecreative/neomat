@@ -4,6 +4,7 @@ import React from "react";
 // plugins
 import Zoom from 'react-medium-image-zoom';
 import 'react-medium-image-zoom/dist/styles.css';
+import ReactGA from 'react-ga';
 
 // styles
 // import { styled } from '@mui/material/styles';
@@ -103,6 +104,7 @@ export default function PhotographsSection() {
                                     srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
                                     alt={item.title}
                                     loading="lazy"
+                                    onClick={ReactGA.event({category: 'Photography', action: 'Clicked on', label: 'Image: ' + item.title})}
                                 />
                             </ImageListItem>
                         </Zoom>

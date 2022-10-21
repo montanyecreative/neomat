@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import { Routes, Route, Link, BrowserRouter, Navigate } from "react-router-dom";
 import { cx, css } from '@emotion/css';
 
+// plugins
+import ReactGA from 'react-ga';
 
 // styles
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -47,6 +49,8 @@ const theme = createTheme({
 
 const drawerWidth = 240;
 
+const TRACKING_ID = "UA-148618940-1";
+
 const hide = css`
   display: none;
 `
@@ -77,6 +81,8 @@ function App(props) {
     setOpen(false);
     scrollToTop();
   };
+
+  ReactGA.initialize(TRACKING_ID);
 
   const drawer = (
     <div>
@@ -116,6 +122,10 @@ function App(props) {
       </List>
     </div>
   );
+
+  useEffect(() => {
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>
