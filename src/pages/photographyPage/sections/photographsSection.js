@@ -32,6 +32,7 @@ import image8 from "../../../assets/imgs/photography/lake-bridge.jpg";
 import image9 from "../../../assets/imgs/photography/tower-in-trees.jpg";
 import image10 from "../../../assets/imgs/photography/lake-sky-view.jpg";
 import image11 from "../../../assets/imgs/photography/lake-reeds-white.jpg";
+import image12 from "../../../assets/imgs/photography/zoo-bird-lake.jpg";
 
 const itemData = [
     {
@@ -87,6 +88,11 @@ const itemData = [
     {
       img: image11,
       title: 'Lake reeds and surface algae',
+      category: 'infrared',
+    },
+    {
+      img: image12,
+      title: 'Zoo birds on lake',
       category: 'infrared',
     },
   ];
