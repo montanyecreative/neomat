@@ -5,6 +5,10 @@ import { cx, css } from '@emotion/css';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
 
 // icons
 import BookIcon from '@mui/icons-material/Book';
@@ -12,6 +16,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 // images
 import bannerImage from "../../../assets/imgs/trailhead1.jpeg";
+import photographyShowcaseImage from "../../../assets/imgs/photography/storm-sunset.JPG";
 
 // styles
 import {
@@ -65,6 +70,8 @@ const bannerCopyContainer = css`
     }
 `
 
+var photographyShowcaseImageDescription = 'Sunset lights storm foreground.';
+
 export default function AdvertisementsSection() {
     return (
         <div className={cx(textCenter, paddingTop)}>
@@ -94,7 +101,39 @@ export default function AdvertisementsSection() {
                     </Button>
                 </Link>
             </div>
-            <div className={cx(my2)}>
+            <div className={cx(textCenter, paddingTop)}>
+                <Card>
+                    <CardMedia
+                        sx={{ height: 500 }}
+                        image={photographyShowcaseImage}
+                        title={photographyShowcaseImageDescription}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            Upcoming Shopify for Photography
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            In the coming months, individuals will be able to purchase Montanye Creativity photography prints and have them shipped right to your door!
+                        </Typography>
+                    </CardContent>
+                    <CardActions sx={{ justifyContent: 'center' }}>
+                        <Link
+                            href="/Photography"
+                            title="See more photography here"
+                            rel="noopener"
+                        >
+                            <Button
+                                className={cx(buttonPrimary, buttonLink)}
+                                id="buttonIcon"
+                                aria-label="See more photography here"
+                            >
+                                See More
+                            </Button>
+                        </Link>
+                    </CardActions>
+                </Card>
+            </div>
+            {/* <div className={cx(my2)}>
                 <Typography variant="h4" gutterBottom component="h4">
                     Professional Guides
                 </Typography>
@@ -112,7 +151,7 @@ export default function AdvertisementsSection() {
                         See guides
                     </Button>
                 </Link>
-            </div>
+            </div> */}
             <div className={cx(my2)}>
                 <Typography variant="h4" gutterBottom component="h4">
                     My Salesforce Journey
