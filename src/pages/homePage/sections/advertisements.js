@@ -39,9 +39,9 @@ const bannerStyle = css`
     background-image: url(${bannerImage});
     background-size: cover;
     background-position: 50%;
-    height: 65vh;
-    min-height: 65vh;
-    max-height: 650px;
+    height: 25vh;
+    min-height: 25vh;
+    max-height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
