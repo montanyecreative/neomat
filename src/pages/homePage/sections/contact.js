@@ -82,7 +82,7 @@ export default function ContactSection() {
             <Typography paragraph className={cx(emphasis)}>
                 *References available upon request
             </Typography>
-            <Link href="mailto:jmontanye24@gmail.com" target="_blank" rel="noopener">
+            <Link href="mailto:montanyecreative@outlook.com" target="_blank" rel="noopener">
                 <Button
                     className={cx(buttonPrimary, buttonLink)}
                     startIcon={<EmailIcon />}

@@ -56,7 +56,7 @@ function handleDownload() {
 };
 
 function handleEmail() {
-    var emailAddress = 'jmontanye24@gmail.com';
+    var emailAddress = 'montanyecreative@outlook.com';
     document.location = 'mailto:' + emailAddress;
 };
 

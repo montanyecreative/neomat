@@ -44,19 +44,19 @@ export default function Footer() {
                     >
                         &copy; {currentYear} &nbsp;
                         <Link
-                            href="https://www.jmdesigns.io/"
+                            href="https://www.montanyecreative.com/"
                             target="_blank"
                             rel="noopener"
                             color={white}
                             className={cx(linkOverrides)}
                         >
-                            JMDesigns.io
+                            Montanye Creative LLC
                         </Link>
                     </span>
                 </Grid>
                 <Grid item xs={12} sm={4}>
                     <Link
-                        href="mailto:jmontanye24@gmail.com"
+                        href="mailto:montanyecreative@outlook.com"
                         target="_blank"
                         rel="noopener"
                         color={white}

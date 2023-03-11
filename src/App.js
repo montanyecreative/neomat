@@ -88,7 +88,7 @@ function App(props) {
     <div>
       <div>
         <Typography variant="h6" noWrap sx={{ textAlign: 'center' }}>
-          JMDesigns
+          Montanye Creative
         </Typography>
       </div>
       <Divider />
@@ -149,7 +149,7 @@ function App(props) {
                 noWrap
                 aria-label="Navigate to home page"
               >
-                JMDesigns
+                Montanye Creative
               </Typography>
             </a>
             <IconButton
