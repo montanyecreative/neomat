@@ -53,7 +53,7 @@ export default function GuidesListSection() {
                                 Read More
                             </Button>
                             <p sx={{ marginLeft: "1em", fontSize: ".9em" }}>
-                                Last updated: 08/29/2021
+                                <b>Published</b>: 08/29/2021 <b>Last updated</b>: 03/11/2023
                             </p>
                         </CardActions>
                     </Card>

@@ -77,7 +77,7 @@ export default function GuidesPage() {
                             Want to become a website developer?
                         </Typography>
                         <Typography >
-                            Last updated: 08/29/2021
+                            <b>Published</b>: 08/29/2021 <b>Last updated</b>: 03/11/2023
                         </Typography>
                         <img
                             src={guideImage}
@@ -310,13 +310,13 @@ export default function GuidesPage() {
                         </Typography>
                         <Typography gutterBottom variant="body1">
                             <Link
-                                href="https://www.scrum.org/resources/scrum-guide"
+                                href="https://a.co/d/39oAFLO"
                                 target="_blank"
                                 rel="noopener"
-                                aria-label="Buy The Scrum Guide by Ken Schwaber and Jeff Sutherland"
+                                aria-label="Buy The Epic Guide to Agile: More Business Value on a Predictable Schedule with Scrum by Dave Todaro"
                                 className={cx(linkOverrides)}
                             >
-                                The Scrum Guide by Ken Schwaber and Jeff Sutherland
+                                The Epic Guide to Agile: More Business Value on a Predictable Schedule with Scrum by Dave Todaro - Updated 03/11/2023
                             </Link>
                         </Typography>
                         <Typography gutterBottom variant="h5" component="h5" sx={{ marginTop: "1em" }}>
