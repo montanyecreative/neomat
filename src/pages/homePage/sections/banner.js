@@ -51,7 +51,7 @@ export default function BannerSection() {
                     variant="h3"
                     className={cx(customTitle)}
                 >
-                    John Montanye, creative <br /> &amp; software engineer.
+                    John Montanye, creative <br /> &amp; software developer.
                 </Typography>
             </div>
         </div>
