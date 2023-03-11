@@ -57,13 +57,13 @@ export default function ContactSection() {
                     </Link>
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <Link href="https://goo.gl/maps/4yb3nLeBr8TwYhwT7" target="_blank" rel="noopener" color={white} className={cx(linkOverrides)}>
+                    <Link href="https://goo.gl/maps/HYP46WSq7P1GyrMb7" target="_blank" rel="noopener" color={white} className={cx(linkOverrides)}>
                         <LocationOnIcon
                             fontSize="large"
                             className={cx(icon)}
                         />
                         <span className={cx(iconText)}>
-                            Edwardsville, IL
+                            St. Louis, MO
                         </span>
                     </Link>
                 </Grid>
