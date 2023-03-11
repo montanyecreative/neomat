@@ -44,15 +44,14 @@ import githubImage from "../../../../assets/imgs/skills/github-white.svg";
 import mailchimpImage from "../../../../assets/imgs/skills/mailchimp.svg";
 import sassImage from "../../../../assets/imgs/skills/sass.svg";
 import GitHubIcon from '@mui/icons-material/GitHub';
-import LanguageIcon from '@mui/icons-material/Language';
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 // images
-import montanyeWeddingHomePage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-home.png";
-import montanyeWeddingWhenWherePage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-whenwhere.png";
-import montanyeWeddingRSVPPage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-vendors.png";
-import bottomImage from "../../../../assets/imgs/projects/montanye-wedding/montanye-wedding-rsvp.png";
-import mailchimpLayoutImage from "../../../../assets/imgs/projects/montanye-wedding/mailchimp-save-the-date.png";
+import montanyeWeddingHomePage from "../../../../assets/imgs/projects/wedding-website/montanye-wedding-home.png";
+import montanyeWeddingWhenWherePage from "../../../../assets/imgs/projects/wedding-website/montanye-wedding-whenwhere.png";
+import montanyeWeddingRSVPPage from "../../../../assets/imgs/projects/wedding-website/montanye-wedding-vendors.png";
+import bottomImage from "../../../../assets/imgs/projects/wedding-website/montanye-wedding-rsvp.png";
+import mailchimpLayoutImage from "../../../../assets/imgs/projects/wedding-website/mailchimp-save-the-date.png";
 
 const backgroundColor = css`
     background-color: #222;
@@ -151,12 +150,12 @@ export default function MontanyeWedding() {
                             <ArrowBackIcon sx={{ fontSize: ".8rem", marginRight: '.5em' }} />
                             All Projects
                         </Link>,
-                        <Link underline="hover" key="2" color="white" href="/projects/montanye-wedding">
-                            Montanye Wedding
+                        <Link underline="hover" key="2" color="white" href="/projects/wedding-website">
+                            Wedding Website
                         </Link>
                     </Breadcrumbs>
                     <Typography variant="h3" gutterBottom component="h3">
-                        Montanye Wedding
+                        Wedding Website
                     </Typography>
                     <Paper elevation={13} sx={{ backgroundColor: '#222 !important', color: '#FFF' }} className={cx(py1)}>
                         <Box sx={{ width: '100%', marginLeft: 'auto', marginRight: 'auto' }}>
@@ -212,21 +211,6 @@ export default function MontanyeWedding() {
                     }}
                     className={cx(mb3)}
                 >
-                    <Link
-                        href="https://montanyewedding.com/"
-                        title="See website at https://montanyewedding.com/"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        <Button
-                            startIcon={<LanguageIcon />}
-                            className={cx(buttonPrimary, buttonLink)}
-                            size="large"
-                            sx={{ marginTop: '1em !important' }}
-                        >
-                            See Website
-                        </Button>
-                    </Link>
                     <Link
                         href="https://github.com/gatewayitconsulting/montanyewedding"
                         title="See code on Github"
@@ -336,12 +320,12 @@ export default function MontanyeWedding() {
                         <img
                             src={bottomImage}
                             className={cx(bottomPortfolioImage)}
-                            alt="Montanye Wedding RSVP page layout"
+                            alt="Wedding Website RSVP page layout"
                         />
                         <img
                             src={mailchimpLayoutImage}
                             className={cx(bottomPortfolioImage)}
-                            alt="Montanye Wedding Mailchimp Save the Date email layout"
+                            alt="Wedding Website Mailchimp Save the Date email layout"
                         />
                     </div>
                 </Paper>

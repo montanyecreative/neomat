@@ -33,7 +33,7 @@ import CameraAltIcon from '@mui/icons-material/CameraAlt';
 import HomePage from "./pages/homePage/homePage";
 import ResumePage from "./pages/resumePage/resumePage";
 import ProjectsPage from "./pages/projectsPage/projectsPage";
-import MontanyeWeddingProject from "./pages/projectsPage/sections/projects/montanyeWedding";
+import WeddingWebsiteProject from "./pages/projectsPage/sections/projects/weddingWebsite";
 import GitHubReadmeProject from "./pages/projectsPage/sections/projects/githubReadme";
 import GuidesPage from "./pages/guidesPage/guidesPage";
 import BecomeDeveloperGuide from "./pages/guidesPage/sections/guides/becomeDeveloperGuide";
@@ -230,7 +230,7 @@ function App(props) {
             <div />
             <Routes>
               <Route exact path="/home" element={<HomePage />} />
-              <Route path="/projects/montanye-wedding" element={<MontanyeWeddingProject />} />
+              <Route path="/projects/wedding-website" element={<WeddingWebsiteProject />} />
               <Route path="/projects/github-readme" element={<GitHubReadmeProject />} />
               <Route path="/projects" element={<ProjectsPage />} />
               <Route path="/guides/become-a-developer" element={<BecomeDeveloperGuide />} />

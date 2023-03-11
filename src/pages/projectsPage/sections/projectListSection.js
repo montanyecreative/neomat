@@ -69,20 +69,20 @@ export default function ProjectListSection() {
                     <Item key={16} elevation={16} className={cx(montanyeWedding)} />
                     <div className={cx(textMiddle, mx1)}>
                         <Typography variant="h4" component="h4" sx={{ width: '100%' }}>
-                            Montanye Wedding
+                            Wedding Website
                         </Typography>
                         <Typography sx={{ width: '100%' }}>
-                            Wedding website for the Montanye wedding built in Material Design 4.0 and React. Powered on the backend by POSTgres and Node.js.
+                            Wedding website built in Material Design 4.0 and React. Powered on the backend by POSTgres and Node.js.
                         </Typography>
                         <Link
-                            href="/projects/montanye-wedding"
-                            title="See Montanye Wedding project"
+                            href="/projects/wedding-website"
+                            title="See Wedding Website project"
                             sx={{ width: '100%' }}
                         >
                             <Button
                                 className={cx(buttonPrimary, buttonLink)}
                                 startIcon={<VisibilityIcon />}
-                                aria-label="See Montanye Wedding project"
+                                aria-label="See Wedding Website project"
                             >
                                 See project
                             </Button>
