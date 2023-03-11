@@ -68,7 +68,7 @@ export default function ContactSection() {
                     </Link>
                 </Grid>
                 <Grid item xs={12} sm={4}>
-                    <Link href="https://www.gatewayitconsulting.com/contact-us" target="_blank" rel="noopener" color={white} className={cx(linkOverrides)}>
+                    <Link href="mailto:montanyecreative@outlook.com" target="_blank" rel="noopener" color={white} className={cx(linkOverrides)}>
                         <LaptopMacIcon
                             fontSize="large"
                             className={cx(icon)}
