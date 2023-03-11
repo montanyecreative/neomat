@@ -30,8 +30,9 @@ import {
     guideCoverImage
 } from "../../../../assets/styles/neomat";
 
-const backgroundColor = css`
-    background-color: #222;
+const backgroundColorLight = css`
+    background-color: #FFF;
+    color: #222;
 `
 
 const paddingTop = css`
@@ -41,25 +42,24 @@ const paddingTop = css`
 const linkOverrides = css`
     text-decoration: underline !important;
     margin-left: .5em !important;
-    color: #FFF !important;
 `
 
 export default function GuidesPage() {
     return (
         <div className={cx(containerFluid)}>
-            <div className={cx(main, px4, pt2, pb2, textCenter)}>
-                <div className={cx(backgroundColor, paddingTop)}>
+            <div className={cx(main, backgroundColorLight, px4, pt2, pb2, textCenter)}>
+                <div className={cx(paddingTop)}>
                     <div className={cx(container, textLeft)}>
                         <Breadcrumbs
                             separator={<NavigateNextIcon fontSize="small" />}
                             aria-label="Guides navigation"
-                            color="white"
+                            color="black"
                         >
                             <Link
                                 underline="hover"
                                 key="1"
                                 href="/guides"
-                                color="white"
+                                color="black"
                             >
                                 <ArrowBackIcon sx={{ fontSize: ".8rem", marginRight: '.5em' }} />
                                 Guides
@@ -68,7 +68,7 @@ export default function GuidesPage() {
                                 underline="hover"
                                 key="2"
                                 href="/guides/become-a-developer"
-                                color="white"
+                                color="black"
                             >
                                 Want to become a website developer?
                             </Link>
@@ -90,7 +90,7 @@ export default function GuidesPage() {
                             id="buttonIconGithub"
                             aria-label="Read More"
                             href="#skills"
-                            sx={{ boxShadow: "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px !important", marginTop: "2em !important", marginBottom: "2em !important" }}
+                            sx={{ marginTop: "2em !important", marginBottom: "2em !important" }}
                         >
                             Take me to the skills I need
                         </Button>
