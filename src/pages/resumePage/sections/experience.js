@@ -34,7 +34,8 @@ export default function ExperienceSection() {
   }
 
   var currentJobMonths = monthDiff(new Date(2022, 8), new Date());
-  var currentJobYears = yearDiff(new Date(2022, 8), new Date());
+  // var currentJobYears = yearDiff(new Date(2022, 8), new Date());
+  var currentJobYears = "";
 
   return (
     <div className={cx(textCenter)}>
