@@ -21,6 +21,18 @@ const starIcon = css`
 `;
 
 export default function MatrixSection() {
+  var beganSkillStartMonth = 1;
+  var beganSkillStartYear = 2018;
+
+  var beganSkillYears = yearDiff(
+    new Date(beganSkillStartYear, beganSkillStartMonth),
+    new Date()
+  );
+
+  function yearDiff(dateFrom, dateTo) {
+    return dateTo.getFullYear() - dateFrom.getFullYear();
+  }
+
   return (
     <div className={cx(textCenter)}>
       <Grid
@@ -67,7 +79,9 @@ export default function MatrixSection() {
                   <TableCell style={{ color: "#FFF" }}>
                     Web Development (PWAs, Localization, Responsive)
                   </TableCell>
-                  <TableCell style={{ color: "#FFF" }}>5+</TableCell>
+                  <TableCell style={{ color: "#FFF" }}>
+                    {beganSkillYears ? beganSkillYears + "+" : ""}
+                  </TableCell>
                   <TableCell style={{ color: "#FFF" }}>
                     <StarIcon className={cx(starIcon)} />
                     <StarIcon className={cx(starIcon)} />
@@ -82,7 +96,9 @@ export default function MatrixSection() {
                   <TableCell style={{ color: "#FFF" }}>
                     Salesforce Commerce Cloud
                   </TableCell>
-                  <TableCell style={{ color: "#FFF" }}>3+</TableCell>
+                  <TableCell style={{ color: "#FFF" }}>
+                    {beganSkillYears ? beganSkillYears - 2 + "+" : ""}
+                  </TableCell>
                   <TableCell style={{ color: "#FFF" }}>
                     <StarIcon className={cx(starIcon)} />
                     <StarIcon className={cx(starIcon)} />
@@ -96,7 +112,9 @@ export default function MatrixSection() {
                   <TableCell style={{ color: "#FFF" }}>
                     Page Designer (SME)
                   </TableCell>
-                  <TableCell style={{ color: "#FFF" }}>2+</TableCell>
+                  <TableCell style={{ color: "#FFF" }}>
+                    {beganSkillYears ? beganSkillYears - 3 + "+" : ""}
+                  </TableCell>
                   <TableCell style={{ color: "#FFF" }}>
                     <StarIcon className={cx(starIcon)} />
                     <StarIcon className={cx(starIcon)} />
@@ -111,7 +129,9 @@ export default function MatrixSection() {
                   <TableCell style={{ color: "#FFF" }}>
                     JavaScript (React, Nodejs, Angular2, AngularJS, jQuery)
                   </TableCell>
-                  <TableCell style={{ color: "#FFF" }}>5+</TableCell>
+                  <TableCell style={{ color: "#FFF" }}>
+                    {beganSkillYears ? beganSkillYears + "+" : ""}
+                  </TableCell>
                   <TableCell style={{ color: "#FFF" }}>
                     <StarIcon className={cx(starIcon)} />
                     <StarIcon className={cx(starIcon)} />
@@ -125,7 +145,9 @@ export default function MatrixSection() {
                   <TableCell style={{ color: "#FFF" }}>
                     ADA Compliance
                   </TableCell>
-                  <TableCell style={{ color: "#FFF" }}>4+</TableCell>
+                  <TableCell style={{ color: "#FFF" }}>
+                    {beganSkillYears ? beganSkillYears - 1 + "+" : ""}
+                  </TableCell>
                   <TableCell style={{ color: "#FFF" }}>
                     <StarIcon className={cx(starIcon)} />
                     <StarIcon className={cx(starIcon)} />
@@ -139,7 +161,9 @@ export default function MatrixSection() {
                   <TableCell style={{ color: "#FFF" }}>
                     Bootstrap (3,4,5)
                   </TableCell>
-                  <TableCell style={{ color: "#FFF" }}>5+</TableCell>
+                  <TableCell style={{ color: "#FFF" }}>
+                    {beganSkillYears ? beganSkillYears + "+" : ""}
+                  </TableCell>
                   <TableCell style={{ color: "#FFF" }}>
                     <StarIcon className={cx(starIcon)} />
                     <StarIcon className={cx(starIcon)} />
@@ -152,7 +176,9 @@ export default function MatrixSection() {
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell style={{ color: "#FFF" }}>APIs</TableCell>
-                  <TableCell style={{ color: "#FFF" }}>3+</TableCell>
+                  <TableCell style={{ color: "#FFF" }}>
+                    {beganSkillYears ? beganSkillYears - 2 + "+" : ""}
+                  </TableCell>
                   <TableCell style={{ color: "#FFF" }}>
                     <StarIcon className={cx(starIcon)} />
                     <StarIcon className={cx(starIcon)} />
@@ -165,7 +191,9 @@ export default function MatrixSection() {
                   <TableCell style={{ color: "#FFF" }}>
                     Agile (Scrum, SAFe, Jira/Confluence Poweruser)
                   </TableCell>
-                  <TableCell style={{ color: "#FFF" }}>5+</TableCell>
+                  <TableCell style={{ color: "#FFF" }}>
+                    {beganSkillYears ? beganSkillYears + "+" : ""}
+                  </TableCell>
                   <TableCell style={{ color: "#FFF" }}>
                     <StarIcon className={cx(starIcon)} />
                     <StarIcon className={cx(starIcon)} />
@@ -178,7 +206,9 @@ export default function MatrixSection() {
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell style={{ color: "#FFF" }}>HTML/CSS</TableCell>
-                  <TableCell style={{ color: "#FFF" }}>5+</TableCell>
+                  <TableCell style={{ color: "#FFF" }}>
+                    {beganSkillYears ? beganSkillYears + "+" : ""}
+                  </TableCell>
                   <TableCell style={{ color: "#FFF" }}>
                     <StarIcon className={cx(starIcon)} />
                     <StarIcon className={cx(starIcon)} />
@@ -193,7 +223,9 @@ export default function MatrixSection() {
                   <TableCell style={{ color: "#FFF" }}>
                     UX/UI Tools (Adobe Photoshop, XD, Illustrator, Figma)
                   </TableCell>
-                  <TableCell style={{ color: "#FFF" }}>5+</TableCell>
+                  <TableCell style={{ color: "#FFF" }}>
+                    {beganSkillYears ? beganSkillYears + "+" : ""}
+                  </TableCell>
                   <TableCell style={{ color: "#FFF" }}>
                     <StarIcon className={cx(starIcon)} />
                     <StarIcon className={cx(starIcon)} />
