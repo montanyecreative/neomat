@@ -15,12 +15,31 @@ import ignitionCommerceLogo from "../../../assets/imgs/ignition-commerce-logo.pn
 import newbalanceLogo from "../../../assets/imgs/newbalance.svg";
 import syllogisteksLogo from "../../../assets/imgs/syllogisteks.ico";
 import gatewayitconsultingLogo from "../../../assets/imgs/gitc.svg";
+import montanyecreativeLogo from "../../../assets/imgs/Montanye-Creative-Logo.svg";
 import citizenWatchesAmericaLogo from "../../../assets/imgs/citizen-logo.jpeg";
 
 // styles
 import { textCenter } from "../../../assets/styles/neomat";
 
 export default function ExperienceSection() {
+  var currentJobStartMonth = 8;
+  var currentJobStartYear = 2022;
+  var currentJobMonths = monthDiff(
+    new Date(currentJobStartYear, currentJobStartMonth),
+    new Date()
+  );
+  // var currentJobYears = yearDiff(new Date(2022, 8), new Date());
+  var currentJobYears = "";
+
+  var sideJobStartMonth = 1;
+  var sideJobStartYear = 2023;
+  var sideJobCurrentJobMonths = monthDiff(
+    new Date(sideJobStartYear, sideJobStartMonth),
+    new Date()
+  );
+  // var sideJobCurrentJobYears = yearDiff(new Date(2022, 8), new Date());
+  var sideJobCurrentJobYears = "";
+
   function monthDiff(dateFrom, dateTo) {
     return (
       dateTo.getMonth() -
@@ -32,10 +51,6 @@ export default function ExperienceSection() {
   //   function yearDiff(dateFrom, dateTo) {
   //     return dateTo.getFullYear() - dateFrom.getFullYear();
   //   }
-
-  var currentJobMonths = monthDiff(new Date(2022, 8), new Date());
-  // var currentJobYears = yearDiff(new Date(2022, 8), new Date());
-  var currentJobYears = "";
 
   return (
     <div className={cx(textCenter)}>
@@ -538,8 +553,54 @@ export default function ExperienceSection() {
               }}
             />
             <Typography variant="body1">
-              2018 - Current (4 years 7 months)
+              March 2023 - Current (
+              {sideJobCurrentJobYears ? sideJobCurrentJobYears + "year" : ""}
+              {sideJobCurrentJobMonths}{" "}
+              {sideJobCurrentJobMonths > 1 ? "months" : "month"})
             </Typography>
+          </div>
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <img
+              src={montanyecreativeLogo}
+              style={{ width: "30px", marginRight: ".5em" }}
+              alt="Montanye Creative logo"
+            />
+            <Typography
+              variant="h4"
+              component="h3"
+              style={{ display: "inline" }}
+            >
+              Montanye Creative
+            </Typography>
+          </div>
+          <Typography
+            variant="body1"
+            style={{ marginTop: ".25em", marginBottom: ".25em" }}
+          >
+            <i>Clients include internal.</i>
+          </Typography>
+          <Typography variant="body1" style={{ marginLeft: "1em" }}>
+            - Designed, developed, and maintain external facing digital
+            portfolio website using React, Material Design (MUI), JavaScript,
+            HTML5, CSS.
+          </Typography>
+        </Grid>
+        <Grid item xs={12} style={{ marginTop: "3em" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              borderTop: "1px solid #FFF",
+              paddingTop: "1em",
+            }}
+          >
+            <RadioButtonUncheckedIcon
+              style={{
+                marginRight: ".25em",
+                boxShadow: "0px 13px 27px -5px #000, 0px 8px 16px -8px #222",
+              }}
+            />
+            <Typography variant="body1">2018 - 2023 (5 years)</Typography>
           </div>
           <div style={{ display: "flex", alignItems: "center" }}>
             <img
