@@ -1,33 +1,35 @@
-import React, { useEffect } from 'react';
-import './App.css';
+import React, { useEffect } from "react";
+import "./App.css";
 import { Routes, Route, Link, BrowserRouter, Navigate } from "react-router-dom";
-import { cx, css } from '@emotion/css';
+import { cx, css } from "@emotion/css";
 
 // plugins
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga";
 
 // styles
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Drawer from '@mui/material/Drawer';
-import Divider from '@mui/material/Divider';
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import IconButton from '@mui/material/IconButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import CssBaseline from "@mui/material/CssBaseline";
+import AppBar from "@mui/material/AppBar";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import IconButton from "@mui/material/IconButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
 
 // icons
-import MenuIcon from '@mui/icons-material/Menu';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
-import HomeIcon from '@mui/icons-material/Home';
-import DesktopMacIcon from '@mui/icons-material/DesktopMac';
-import AssignmentIcon from '@mui/icons-material/Assignment';
-import LibraryBooksIcon from '@mui/icons-material/LibraryBooks';
-import CameraAltIcon from '@mui/icons-material/CameraAlt';
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import HomeIcon from "@mui/icons-material/Home";
+import DesktopMacIcon from "@mui/icons-material/DesktopMac";
+import AssignmentIcon from "@mui/icons-material/Assignment";
+import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
+
+// images
+import logo from "./assets/imgs/Montanye-Creative-Logo.svg";
 
 // components/sections
 import HomePage from "./pages/homePage/homePage";
@@ -42,8 +44,8 @@ import PhotographyPage from "./pages/photographyPage/photographyPage";
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#222'
-    }
+      main: "#222",
+    },
   },
 });
 
@@ -53,12 +55,13 @@ const TRACKING_ID = "UA-148618940-1";
 
 const hide = css`
   display: none;
-`
+`;
+
 const neoOpenMenu = css`
-    border-radius: 50px;
-    background: linear-gradient(225deg, #1f1f1f, #242424);
-    box-shadow: -7px 7px 13px #1d1d1d, 7px -7px 13px #272727;
-`
+  border-radius: 50px;
+  background: linear-gradient(225deg, #1f1f1f, #242424);
+  box-shadow: -7px 7px 13px #1d1d1d, 7px -7px 13px #272727;
+`;
 
 function App(props) {
   const { container } = props;
@@ -86,39 +89,37 @@ function App(props) {
 
   const drawer = (
     <div>
-      <div>
-        <Typography variant="h6" noWrap sx={{ textAlign: 'center' }}>
-          Montanye Creative
-        </Typography>
-      </div>
-      <Divider />
       <List>
-        {["Home", "Projects", "Resume", "Guides", "Photography"].map((text, index) => (
-          <ListItem
-            key={text}
-            component={Link}
-            to={"/" + text.toLocaleLowerCase()}
-            sx={{
-              margin: "0.3em",
-              marginBottom: "1em",
-              borderRadius: "8px",
-              background: "ffffff",
-              boxShadow: "-6px 6px 12px #e6e6e6, 6px -6px 12px #ffffff",
-              color: "#222"
-            }}
-            onClick={followLink}
-            aria-label={"Navigate to the " + text.toLocaleLowerCase() + " page"}
-          >
-            <ListItemIcon>
-              {index === 0 ? <HomeIcon /> : <span></span>}
-              {index === 1 ? <DesktopMacIcon /> : <span></span>}
-              {index === 2 ? <AssignmentIcon /> : <span></span>}
-              {index === 3 ? <LibraryBooksIcon /> : <span></span>}
-              {index === 4 ? <CameraAltIcon /> : <span></span>}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
+        {["Home", "Projects", "Resume", "Guides", "Photography"].map(
+          (text, index) => (
+            <ListItem
+              key={text}
+              component={Link}
+              to={"/" + text.toLocaleLowerCase()}
+              sx={{
+                margin: "0.3em",
+                marginBottom: "1em",
+                borderRadius: "8px",
+                background: "ffffff",
+                boxShadow: "-6px 6px 12px #e6e6e6, 6px -6px 12px #ffffff",
+                color: "#222",
+              }}
+              onClick={followLink}
+              aria-label={
+                "Navigate to the " + text.toLocaleLowerCase() + " page"
+              }
+            >
+              <ListItemIcon>
+                {index === 0 ? <HomeIcon /> : <span></span>}
+                {index === 1 ? <DesktopMacIcon /> : <span></span>}
+                {index === 2 ? <AssignmentIcon /> : <span></span>}
+                {index === 3 ? <LibraryBooksIcon /> : <span></span>}
+                {index === 4 ? <CameraAltIcon /> : <span></span>}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          )
+        )}
       </List>
     </div>
   );
@@ -130,20 +131,19 @@ function App(props) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <div className="App" sx={{ display: 'flex' }}>
-        <AppBar position="fixed"
+      <div className="App" sx={{ display: "flex" }}>
+        <AppBar
+          position="fixed"
           sx={{
             marginLeft: drawerWidth,
             backgroundColor: "#222 !important",
             minHeight: "70px !important",
-            height: "70px !important"
+            height: "70px !important",
           }}
         >
-          <Toolbar sx={{ justifyContent: 'space-between' }}>
-            <a
-              href="/Home"
-              id="brand-link"
-            >
+          <Toolbar sx={{ justifyContent: "space-between" }}>
+            <a href="/Home" id="brand-link" sx={{ verticalAlign: "middle" }}>
+              <img src={logo} id="logoStyles" />
               <Typography
                 variant="h6"
                 noWrap
@@ -157,7 +157,7 @@ function App(props) {
               aria-label="Open menu"
               edge="end"
               onClick={handleDrawerOpen}
-              className={cx(open && hide), neoOpenMenu}
+              className={(cx(open && hide), neoOpenMenu)}
             >
               <MenuIcon />
             </IconButton>
@@ -168,8 +168,8 @@ function App(props) {
             sx={{
               [theme.breakpoints.up("sm")]: {
                 width: drawerWidth,
-                flexShrink: 0
-              }
+                flexShrink: 0,
+              },
             }}
             aria-label="Navigation menu"
           >
@@ -182,23 +182,23 @@ function App(props) {
               sx={{
                 width: drawerWidth,
                 flexShrink: 0,
-                '& .MuiDrawer-paper': {
+                "& .MuiDrawer-paper": {
                   width: drawerWidth,
                   borderRadius: "3px",
-                  overflowX: "hidden"
+                  overflowX: "hidden",
                 },
               }}
               ModalProps={{
-                keepMounted: true // Better open performance on mobile.
+                keepMounted: true, // Better open performance on mobile.
               }}
             >
               <div
                 sx={{
-                  display: 'flex',
-                  alignItems: 'center',
+                  display: "flex",
+                  alignItems: "center",
                   // necessary for content to be below app bar
                   ...theme.mixins.toolbar,
-                  justifyContent: 'flex-start'
+                  justifyContent: "flex-start",
                 }}
               >
                 <IconButton
@@ -206,7 +206,7 @@ function App(props) {
                   sx={{
                     borderRadius: "50px",
                     background: "linear-gradient(225deg, #e6e6e6, #ffffff)",
-                    boxShadow: "-7px 7px 14px #d9d9d9, 7px -7px 14px #ffffff"
+                    boxShadow: "-7px 7px 14px #d9d9d9, 7px -7px 14px #ffffff",
                   }}
                   aria-label="Close menu"
                 >
@@ -222,18 +222,27 @@ function App(props) {
               flexGrow: 1,
               padding: 0,
               [theme.breakpoints.up("sm")]: {
-                marginLeft: -drawerWidth
+                marginLeft: -drawerWidth,
               },
-              backgroundColor: "#222"
+              backgroundColor: "#222",
             }}
           >
             <div />
             <Routes>
               <Route exact path="/home" element={<HomePage />} />
-              <Route path="/projects/wedding-website" element={<WeddingWebsiteProject />} />
-              <Route path="/projects/github-readme" element={<GitHubReadmeProject />} />
+              <Route
+                path="/projects/wedding-website"
+                element={<WeddingWebsiteProject />}
+              />
+              <Route
+                path="/projects/github-readme"
+                element={<GitHubReadmeProject />}
+              />
               <Route path="/projects" element={<ProjectsPage />} />
-              <Route path="/guides/become-a-developer" element={<BecomeDeveloperGuide />} />
+              <Route
+                path="/guides/become-a-developer"
+                element={<BecomeDeveloperGuide />}
+              />
               <Route path="/guides" element={<GuidesPage />} />
               <Route path="/resume" element={<ResumePage />} />
               <Route path="/photography" element={<PhotographyPage />} />

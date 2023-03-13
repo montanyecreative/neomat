@@ -29,9 +29,9 @@ export default function ExperienceSection() {
     );
   }
 
-  function yearDiff(dateFrom, dateTo) {
-    return dateTo.getFullYear() - dateFrom.getFullYear();
-  }
+  //   function yearDiff(dateFrom, dateTo) {
+  //     return dateTo.getFullYear() - dateFrom.getFullYear();
+  //   }
 
   var currentJobMonths = monthDiff(new Date(2022, 8), new Date());
   // var currentJobYears = yearDiff(new Date(2022, 8), new Date());
