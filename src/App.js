@@ -207,6 +207,10 @@ function App(props) {
                     borderRadius: "50px",
                     background: "linear-gradient(225deg, #e6e6e6, #ffffff)",
                     boxShadow: "-7px 7px 14px #d9d9d9, 7px -7px 14px #ffffff",
+                    display: "flex !important",
+                    marginLeft: "auto",
+                    marginRight: "0.35em",
+                    marginTop: "0.35em",
                   }}
                   aria-label="Close menu"
                 >
