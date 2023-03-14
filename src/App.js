@@ -27,6 +27,8 @@ import DesktopMacIcon from "@mui/icons-material/DesktopMac";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+
 
 // images
 import logo from "./assets/imgs/Montanye-Creative-Logo.svg";
@@ -40,6 +42,7 @@ import GitHubReadmeProject from "./pages/projectsPage/sections/projects/githubRe
 import GuidesPage from "./pages/guidesPage/guidesPage";
 import BecomeDeveloperGuide from "./pages/guidesPage/sections/guides/becomeDeveloperGuide";
 import PhotographyPage from "./pages/photographyPage/photographyPage";
+import ServicesPage from "./pages/servicesPage/servicesPage";
 
 const theme = createTheme({
   palette: {
@@ -90,7 +93,7 @@ function App(props) {
   const drawer = (
     <div>
       <List>
-        {["Home", "Projects", "Resume", "Guides", "Photography"].map(
+        {["Home", "Projects", "Resume", "Guides", "Photography", "Services"].map(
           (text, index) => (
             <ListItem
               key={text}
@@ -115,6 +118,7 @@ function App(props) {
                 {index === 2 ? <AssignmentIcon /> : <span></span>}
                 {index === 3 ? <LibraryBooksIcon /> : <span></span>}
                 {index === 4 ? <CameraAltIcon /> : <span></span>}
+                {index === 5 ? <DesignServicesIcon /> : <span></span>}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
@@ -250,6 +254,7 @@ function App(props) {
               <Route path="/guides" element={<GuidesPage />} />
               <Route path="/resume" element={<ResumePage />} />
               <Route path="/photography" element={<PhotographyPage />} />
+              <Route path="/services" element={<ServicesPage />} />
               <Route path="/" element={<Navigate to="/home" />} />
             </Routes>
           </main>
