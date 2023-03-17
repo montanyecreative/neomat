@@ -83,7 +83,7 @@ export default function AdvertisementsSection() {
           on Github below.
         </Typography>
         <Link
-          href="https://github.com/gatewayitconsulting/neomat"
+          href="https://github.com/montanyecreative/neomat"
           title="See code on Github"
           target="_blank"
           rel="noopener"
