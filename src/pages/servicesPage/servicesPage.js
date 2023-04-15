@@ -4,6 +4,7 @@ import { cx, css } from "@emotion/css";
 // sections of this page
 import Footer from "../../components/footer.js";
 import BannerSection from "./sections/banner.js";
+import PricingCalculatorSection from "./sections/pricing-calculator.js";
 
 // mui components
 import Accordion from "@mui/material/Accordion";
@@ -16,6 +17,7 @@ import Box from "@mui/material/Box";
 import SpeedDial from "@mui/material/SpeedDial";
 import SpeedDialIcon from "@mui/material/SpeedDialIcon";
 import SpeedDialAction from "@mui/material/SpeedDialAction";
+import ImageListItemBar from "@mui/material/ImageListItemBar";
 
 // icons
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -27,11 +29,11 @@ import websiteCreate from "../../assets/imgs/services/website-create.jpg";
 import websiteRefresh from "../../assets/imgs/services/website-refresh.png";
 import pictureStack from "../../assets/imgs/services/picture-stack.jpg";
 import vhsStack from "../../assets/imgs/services/vhs-stack.jpg";
-import aiRestoration from "../../assets/imgs/services/ai-restoration.jpg";
+import aiRestoration from "../../assets/imgs/services/photo-restoration.jpg";
 import computerRepair from "../../assets/imgs/services/computer-repair.jpg";
 
 // styles
-import { containerFluid, container, main, pb2, pt2, px4, textCenter, textLeft, guideCoverImage } from "../../assets/styles/neomat";
+import { containerFluid, main, pb2, pt2, px4, textCenter, textLeft, guideCoverImage } from "../../assets/styles/neomat";
 
 const backgroundColorLight = css`
 	background-color: #fff;
@@ -47,7 +49,6 @@ const imagePadding = css`
 const aiImage = css`
 	width: 100%;
 	height: 100%;
-	max-height: 300px;
 	border-radius: 5px;
 `;
 
@@ -103,7 +104,7 @@ export default function ServicesPage() {
 			</div>
 			<div className={cx(main, backgroundColorLight, px4, pt2, pb2, textCenter)}>
 				<div className={cx(paddingTop)}>
-					<div className={cx(container, textLeft)}>
+					<div className={cx(containerFluid, textLeft)}>
 						<Typography variant="h3" gutterBottom component="h3" sx={{ marginTop: ".25em !important" }}>
 							Services
 						</Typography>
@@ -173,12 +174,16 @@ export default function ServicesPage() {
 												<li>copy</li>
 											</ul>
 										</Grid>
-										<Grid xs={12} md={7} sx={{ marginLeft: "auto !important", marginRight: "auto !important" }}>
+										<Grid xs={12} md={8} sx={{ marginLeft: "auto !important", marginRight: "auto !important" }}>
 											<img
 												src={aiRestoration}
 												alt="Bad resolution of dog image next to great resolution of dog image"
 												className={cx(aiImage)}
 											/>
+											<ImageListItemBar title="Before and after restoration" position="below" />
+										</Grid>
+										<Grid xs={12} md={7} sx={{ marginLeft: "auto !important", marginRight: "auto !important" }}>
+											<PricingCalculatorSection />
 										</Grid>
 									</Grid>
 								</AccordionDetails>
