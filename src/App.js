@@ -27,8 +27,7 @@ import DesktopMacIcon from "@mui/icons-material/DesktopMac";
 import AssignmentIcon from "@mui/icons-material/Assignment";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import CameraAltIcon from "@mui/icons-material/CameraAlt";
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
-
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
 
 // images
 import logo from "./assets/imgs/Montanye-Creative-Logo.svg";
@@ -45,11 +44,11 @@ import PhotographyPage from "./pages/photographyPage/photographyPage";
 import ServicesPage from "./pages/servicesPage/servicesPage";
 
 const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#222",
-    },
-  },
+	palette: {
+		primary: {
+			main: "#222",
+		},
+	},
 });
 
 const drawerWidth = 240;
@@ -57,211 +56,192 @@ const drawerWidth = 240;
 const TRACKING_ID = "UA-148618940-1";
 
 const hide = css`
-  display: none;
+	display: none;
 `;
 
 const neoOpenMenu = css`
-  border-radius: 50px;
-  background: linear-gradient(225deg, #1f1f1f, #242424);
-  box-shadow: -7px 7px 13px #1d1d1d, 7px -7px 13px #272727;
+	border-radius: 50px;
+	background: linear-gradient(225deg, #1f1f1f, #242424);
+	box-shadow: -7px 7px 13px #1d1d1d, 7px -7px 13px #272727;
 `;
 
 function App(props) {
-  const { container } = props;
-  const [open, setOpen] = React.useState(false);
+	const { container } = props;
+	const [open, setOpen] = React.useState(false);
 
-  const scrollToTop = () => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-  };
+	const scrollToTop = () => {
+		window.scrollTo(0, 0);
+		document.body.scrollTop = 0;
+	};
 
-  const handleDrawerOpen = () => {
-    setOpen(true);
-  };
+	const handleDrawerOpen = () => {
+		setOpen(true);
+	};
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+	const handleDrawerClose = () => {
+		setOpen(false);
+	};
 
-  const followLink = () => {
-    setOpen(false);
-    scrollToTop();
-  };
+	const followLink = () => {
+		setOpen(false);
+		scrollToTop();
+	};
 
-  ReactGA.initialize(TRACKING_ID);
+	ReactGA.initialize(TRACKING_ID);
 
-  const drawer = (
-    <div>
-      <List>
-        {["Home", "Projects", "Resume", "Guides", "Photography", "Services"].map(
-          (text, index) => (
-            <ListItem
-              key={text}
-              component={Link}
-              to={"/" + text.toLocaleLowerCase()}
-              sx={{
-                margin: "0.3em",
-                marginBottom: "1em",
-                borderRadius: "8px",
-                background: "ffffff",
-                boxShadow: "-6px 6px 12px #e6e6e6, 6px -6px 12px #ffffff",
-                color: "#222",
-              }}
-              onClick={followLink}
-              aria-label={
-                "Navigate to the " + text.toLocaleLowerCase() + " page"
-              }
-            >
-              <ListItemIcon>
-                {index === 0 ? <HomeIcon /> : <span></span>}
-                {index === 1 ? <DesktopMacIcon /> : <span></span>}
-                {index === 2 ? <AssignmentIcon /> : <span></span>}
-                {index === 3 ? <LibraryBooksIcon /> : <span></span>}
-                {index === 4 ? <CameraAltIcon /> : <span></span>}
-                {index === 5 ? <DesignServicesIcon /> : <span></span>}
-              </ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          )
-        )}
-      </List>
-    </div>
-  );
+	const drawer = (
+		<div>
+			<List>
+				{["Home", "Projects", "Resume", "Guides", "Photography"].map((text, index) => (
+					<ListItem
+						key={text}
+						component={Link}
+						to={"/" + text.toLocaleLowerCase()}
+						sx={{
+							margin: "0.3em",
+							marginBottom: "1em",
+							borderRadius: "8px",
+							background: "ffffff",
+							boxShadow: "-6px 6px 12px #e6e6e6, 6px -6px 12px #ffffff",
+							color: "#222",
+						}}
+						onClick={followLink}
+						aria-label={"Navigate to the " + text.toLocaleLowerCase() + " page"}
+					>
+						<ListItemIcon>
+							{index === 0 ? <HomeIcon /> : <span></span>}
+							{index === 1 ? <DesktopMacIcon /> : <span></span>}
+							{index === 2 ? <AssignmentIcon /> : <span></span>}
+							{index === 3 ? <LibraryBooksIcon /> : <span></span>}
+							{index === 4 ? <CameraAltIcon /> : <span></span>}
+						</ListItemIcon>
+						<ListItemText primary={text} />
+					</ListItem>
+				))}
+			</List>
+		</div>
+	);
 
-  useEffect(() => {
-    ReactGA.pageview(window.location.pathname + window.location.search);
-  }, []);
+	useEffect(() => {
+		ReactGA.pageview(window.location.pathname + window.location.search);
+	}, []);
 
-  return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div className="App" sx={{ display: "flex" }}>
-        <AppBar
-          position="fixed"
-          sx={{
-            marginLeft: drawerWidth,
-            backgroundColor: "#222 !important",
-            minHeight: "70px !important",
-            height: "70px !important",
-          }}
-        >
-          <Toolbar sx={{ justifyContent: "space-between" }}>
-            <a href="/Home" id="brand-link" sx={{ verticalAlign: "middle" }}>
-              <img src={logo} id="logoStyles" />
-              <Typography
-                variant="h6"
-                noWrap
-                aria-label="Navigate to home page"
-              >
-                Montanye Creative
-              </Typography>
-            </a>
-            <IconButton
-              color="inherit"
-              aria-label="Open menu"
-              edge="end"
-              onClick={handleDrawerOpen}
-              className={(cx(open && hide), neoOpenMenu)}
-            >
-              <MenuIcon />
-            </IconButton>
-          </Toolbar>
-        </AppBar>
-        <BrowserRouter>
-          <nav
-            sx={{
-              [theme.breakpoints.up("sm")]: {
-                width: drawerWidth,
-                flexShrink: 0,
-              },
-            }}
-            aria-label="Navigation menu"
-          >
-            <Drawer
-              container={container}
-              variant="persistent"
-              anchor="right"
-              open={open}
-              onClose={handleDrawerClose}
-              sx={{
-                width: drawerWidth,
-                flexShrink: 0,
-                "& .MuiDrawer-paper": {
-                  width: drawerWidth,
-                  borderRadius: "3px",
-                  overflowX: "hidden",
-                },
-              }}
-              ModalProps={{
-                keepMounted: true, // Better open performance on mobile.
-              }}
-            >
-              <div
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  // necessary for content to be below app bar
-                  ...theme.mixins.toolbar,
-                  justifyContent: "flex-start",
-                }}
-              >
-                <IconButton
-                  onClick={handleDrawerClose}
-                  sx={{
-                    borderRadius: "50px",
-                    background: "linear-gradient(225deg, #e6e6e6, #ffffff)",
-                    boxShadow: "-7px 7px 14px #d9d9d9, 7px -7px 14px #ffffff",
-                    display: "flex !important",
-                    marginLeft: "auto",
-                    marginRight: "0.35em",
-                    marginTop: "0.35em",
-                  }}
-                  aria-label="Close menu"
-                >
-                  <ChevronRightIcon />
-                </IconButton>
-              </div>
-              {drawer}
-            </Drawer>
-          </nav>
+	return (
+		<ThemeProvider theme={theme}>
+			<CssBaseline />
+			<div className="App" sx={{ display: "flex" }}>
+				<AppBar
+					position="fixed"
+					sx={{
+						marginLeft: drawerWidth,
+						backgroundColor: "#222 !important",
+						minHeight: "70px !important",
+						height: "70px !important",
+					}}
+				>
+					<Toolbar sx={{ justifyContent: "space-between" }}>
+						<a href="/Home" id="brand-link" sx={{ verticalAlign: "middle" }}>
+							<img src={logo} id="logoStyles" />
+							<Typography variant="h6" noWrap aria-label="Navigate to home page">
+								Montanye Creative
+							</Typography>
+						</a>
+						<IconButton
+							color="inherit"
+							aria-label="Open menu"
+							edge="end"
+							onClick={handleDrawerOpen}
+							className={(cx(open && hide), neoOpenMenu)}
+						>
+							<MenuIcon />
+						</IconButton>
+					</Toolbar>
+				</AppBar>
+				<BrowserRouter>
+					<nav
+						sx={{
+							[theme.breakpoints.up("sm")]: {
+								width: drawerWidth,
+								flexShrink: 0,
+							},
+						}}
+						aria-label="Navigation menu"
+					>
+						<Drawer
+							container={container}
+							variant="persistent"
+							anchor="right"
+							open={open}
+							onClose={handleDrawerClose}
+							sx={{
+								width: drawerWidth,
+								flexShrink: 0,
+								"& .MuiDrawer-paper": {
+									width: drawerWidth,
+									borderRadius: "3px",
+									overflowX: "hidden",
+								},
+							}}
+							ModalProps={{
+								keepMounted: true, // Better open performance on mobile.
+							}}
+						>
+							<div
+								sx={{
+									display: "flex",
+									alignItems: "center",
+									// necessary for content to be below app bar
+									...theme.mixins.toolbar,
+									justifyContent: "flex-start",
+								}}
+							>
+								<IconButton
+									onClick={handleDrawerClose}
+									sx={{
+										borderRadius: "50px",
+										background: "linear-gradient(225deg, #e6e6e6, #ffffff)",
+										boxShadow: "-7px 7px 14px #d9d9d9, 7px -7px 14px #ffffff",
+										display: "flex !important",
+										marginLeft: "auto",
+										marginRight: "0.35em",
+										marginTop: "0.35em",
+									}}
+									aria-label="Close menu"
+								>
+									<ChevronRightIcon />
+								</IconButton>
+							</div>
+							{drawer}
+						</Drawer>
+					</nav>
 
-          <main
-            sx={{
-              flexGrow: 1,
-              padding: 0,
-              [theme.breakpoints.up("sm")]: {
-                marginLeft: -drawerWidth,
-              },
-              backgroundColor: "#222",
-            }}
-          >
-            <div />
-            <Routes>
-              <Route exact path="/home" element={<HomePage />} />
-              <Route
-                path="/projects/wedding-website"
-                element={<WeddingWebsiteProject />}
-              />
-              <Route
-                path="/projects/github-readme"
-                element={<GitHubReadmeProject />}
-              />
-              <Route path="/projects" element={<ProjectsPage />} />
-              <Route
-                path="/guides/become-a-developer"
-                element={<BecomeDeveloperGuide />}
-              />
-              <Route path="/guides" element={<GuidesPage />} />
-              <Route path="/resume" element={<ResumePage />} />
-              <Route path="/photography" element={<PhotographyPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/" element={<Navigate to="/home" />} />
-            </Routes>
-          </main>
-        </BrowserRouter>
-      </div>
-    </ThemeProvider>
-  );
+					<main
+						sx={{
+							flexGrow: 1,
+							padding: 0,
+							[theme.breakpoints.up("sm")]: {
+								marginLeft: -drawerWidth,
+							},
+							backgroundColor: "#222",
+						}}
+					>
+						<div />
+						<Routes>
+							<Route exact path="/home" element={<HomePage />} />
+							<Route path="/projects/wedding-website" element={<WeddingWebsiteProject />} />
+							<Route path="/projects/github-readme" element={<GitHubReadmeProject />} />
+							<Route path="/projects" element={<ProjectsPage />} />
+							<Route path="/guides/become-a-developer" element={<BecomeDeveloperGuide />} />
+							<Route path="/guides" element={<GuidesPage />} />
+							<Route path="/resume" element={<ResumePage />} />
+							<Route path="/photography" element={<PhotographyPage />} />
+							<Route path="/" element={<Navigate to="/home" />} />
+						</Routes>
+					</main>
+				</BrowserRouter>
+			</div>
+		</ThemeProvider>
+	);
 }
 
 export default App;
