@@ -177,7 +177,7 @@ export default function ServicesPage() {
 										<Grid xs={12} md={8} sx={{ marginLeft: "auto !important", marginRight: "auto !important" }}>
 											<img
 												src={aiRestoration}
-												alt="Bad resolution of dog image next to great resolution of dog image"
+												alt="Bad resolution of dog photography next to great resolution of dog photography"
 												className={cx(aiImage)}
 											/>
 											<ImageListItemBar title="Before and after restoration" position="below" />
