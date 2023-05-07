@@ -38,11 +38,6 @@ import image16 from "../../../assets/imgs/photography/rain-on-sunny-day.jpg";
 import image17 from "../../../assets/imgs/photography/rain-in-the-sunshine.jpg";
 import image18 from "../../../assets/imgs/photography/pine-tree-lake.jpg";
 import image19 from "../../../assets/imgs/photography/swamp-bridge.jpg";
-import image20 from "../../../assets/imgs/photography/winding-path-1.jpg";
-import image21 from "../../../assets/imgs/photography/willow-tree.jpg";
-import image22 from "../../../assets/imgs/photography/white-flower-tree.jpg";
-import image23 from "../../../assets/imgs/photography/path-near-homes.jpg";
-import image24 from "../../../assets/imgs/photography/path-meets-sky.jpg";
 
 const itemData = [
 	{
@@ -138,31 +133,6 @@ const itemData = [
 	{
 		img: image19,
 		title: "Bridge on marsh in summer forest and in shade",
-		category: "infrared",
-	},
-	{
-		img: image20,
-		title: "Winding path at park",
-		category: "infrared",
-	},
-	{
-		img: image21,
-		title: "Willow tree at park",
-		category: "infrared",
-	},
-	{
-		img: image22,
-		title: "White flower tree at park",
-		category: "infrared",
-	},
-	{
-		img: image23,
-		title: "Winding path near homes at park",
-		category: "infrared",
-	},
-	{
-		img: image24,
-		title: "Winding path meets sky at park",
 		category: "infrared",
 	},
 ];
