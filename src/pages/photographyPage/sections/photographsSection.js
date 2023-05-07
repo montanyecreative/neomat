@@ -177,9 +177,8 @@ export default function PhotographsSection() {
 							<ImageListItem key={item.img}>
 								<img
 									src={`${item.img}?w=248&fit=crop&auto=format`}
-									srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+									srcSet={`${item.img}?w=248&fit=crop&auto=format`}
 									alt={item.title}
-									loading="lazy"
 									onClick={ReactGA.event({
 										category: "Photography",
 										action: "Clicked on",
